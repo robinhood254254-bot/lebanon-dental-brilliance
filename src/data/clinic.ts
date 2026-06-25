@@ -1,0 +1,389 @@
+import img1 from "@/assets/image.asset.json";
+import img3 from "@/assets/image-3.asset.json";
+import img4 from "@/assets/image-4.asset.json";
+import img5 from "@/assets/image-5.asset.json";
+import img6 from "@/assets/image-6.asset.json";
+import img7 from "@/assets/image-7.asset.json";
+import img8 from "@/assets/image-8.asset.json";
+import img9 from "@/assets/image-9.asset.json";
+import img10 from "@/assets/image-10.asset.json";
+import clinic from "@/assets/clinic-interior.jpg";
+import dentist from "@/assets/dentist-portrait.jpg";
+import smile1 from "@/assets/smile-1.jpg";
+import smile2 from "@/assets/smile-2.jpg";
+
+export const LOGO = img1.url;
+export const IMAGES = {
+  logo: img1.url,
+  cavities: img3.url,
+  childCheckup: img4.url,
+  whiteningBA: img5.url,
+  veneersBA: img6.url,
+  childSmile: img7.url,
+  boyDentist: img8.url,
+  whiteningProcess: img9.url,
+  dentures: img10.url,
+  clinic,
+  dentist,
+  smile1,
+  smile2,
+};
+
+export const CLINIC = {
+  name: "Lebanon Dental Care",
+  tagline: "Your Smile, Our Priority",
+  whatsapp: "254715292743",
+  whatsappDisplay: "+254 715 292 743",
+  emergency: "254706194409",
+  emergencyDisplay: "+254 706 194 409",
+  email: "info@lebanondentalcare.co.ke",
+  hours: [
+    { day: "Monday - Friday", time: "8:00 AM - 7:00 PM" },
+    { day: "Saturday", time: "9:00 AM - 5:00 PM" },
+    { day: "Sunday", time: "Emergencies Only" },
+  ],
+  address: "Lebanon Dental Care Clinic, Kenya",
+  mapLink:
+    "https://www.google.com/local/place/fid/0x184013573c0284cb:0x47817c1945afde0a/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3D7SMSHFHPjvccUIcH_Yw6fQ%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D172.86574%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFjdTTVNIRkhQanZjY1VJY0hfWXc2ZlE%3D",
+};
+
+export const buildWhatsAppUrl = (message: string, phone = CLINIC.whatsapp) =>
+  `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+export type Service = {
+  slug: string;
+  name: string;
+  short: string;
+  description: string;
+  image: string;
+  benefits: string[];
+  process: { step: string; detail: string }[];
+  faqs: { q: string; a: string }[];
+};
+
+export const SERVICES: Service[] = [
+  {
+    slug: "teeth-masking",
+    name: "Teeth Masking",
+    short: "Cosmetic masking for stained or discoloured teeth.",
+    description:
+      "Restore your smile's natural appearance with our advanced teeth masking treatment that conceals discolouration, stains and minor imperfections.",
+    image: IMAGES.veneersBA,
+    benefits: ["Natural look", "Same-day results", "Non-invasive", "Long-lasting"],
+    process: [
+      { step: "Consultation", detail: "We assess your teeth and discuss desired outcomes." },
+      { step: "Shade Matching", detail: "Custom shade match for a natural finish." },
+      { step: "Application", detail: "Careful layering of masking material." },
+      { step: "Polish & Reveal", detail: "Final polish for a seamless smile." },
+    ],
+    faqs: [
+      { q: "Is teeth masking painful?", a: "No. The procedure is comfortable and non-invasive." },
+      { q: "How long does it last?", a: "With good oral hygiene, results last several years." },
+    ],
+  },
+  {
+    slug: "teeth-cleaning",
+    name: "Teeth Cleaning",
+    short: "Professional scaling and polishing for healthy gums.",
+    description:
+      "Routine professional cleaning removes plaque, tartar and surface stains keeping your gums healthy and your smile bright.",
+    image: IMAGES.whiteningBA,
+    benefits: ["Prevents gum disease", "Removes tartar", "Brightens smile", "Fresh breath"],
+    process: [
+      { step: "Examination", detail: "Quick oral health assessment." },
+      { step: "Scaling", detail: "Ultrasonic removal of plaque and tartar." },
+      { step: "Polishing", detail: "Stain removal and smooth finish." },
+      { step: "Fluoride", detail: "Protective fluoride application." },
+    ],
+    faqs: [
+      { q: "How often should I clean?", a: "Every 6 months for optimal oral health." },
+      { q: "Will it hurt?", a: "Cleaning is comfortable for most patients." },
+    ],
+  },
+  {
+    slug: "fixed-orthodontics",
+    name: "Fixed Orthodontics (Braces)",
+    short: "Traditional braces that align your smile beautifully.",
+    description:
+      "Our fixed braces use modern brackets and wires to gradually straighten teeth and correct bite issues for a confident, lasting smile.",
+    image: IMAGES.whiteningProcess,
+    benefits: ["Permanent correction", "Improves bite", "Boosts confidence", "Affordable plans"],
+    process: [
+      { step: "Assessment", detail: "Comprehensive orthodontic evaluation and X-rays." },
+      { step: "Fitting", detail: "Brackets and wires bonded to your teeth." },
+      { step: "Adjustments", detail: "Monthly tightening visits." },
+      { step: "Retention", detail: "Retainers to maintain results." },
+    ],
+    faqs: [
+      { q: "How long is treatment?", a: "Typically 12–24 months depending on case." },
+      { q: "Are braces painful?", a: "Mild discomfort after adjustments, manageable easily." },
+    ],
+  },
+  {
+    slug: "removable-orthodontic-appliances",
+    name: "Removable Orthodontic Appliances",
+    short: "Discreet, removable aligners and appliances.",
+    description:
+      "Removable appliances offer flexibility for minor corrections, growth guidance in children and post-treatment retention.",
+    image: IMAGES.childCheckup,
+    benefits: ["Removable for eating", "Easy hygiene", "Comfortable", "Discreet"],
+    process: [
+      { step: "Impressions", detail: "Digital scans of your teeth." },
+      { step: "Custom Build", detail: "Lab-fabricated appliance." },
+      { step: "Fitting", detail: "Comfortable fitting session." },
+      { step: "Review", detail: "Regular progress checks." },
+    ],
+    faqs: [
+      { q: "Can I eat with them?", a: "Remove during meals for best results." },
+      { q: "How do I clean them?", a: "Brush gently and soak in cleaning solution." },
+    ],
+  },
+  {
+    slug: "teeth-filling",
+    name: "Teeth Filling",
+    short: "Tooth-coloured fillings that restore decayed teeth.",
+    description:
+      "Modern composite fillings restore decayed or chipped teeth with a natural appearance and durable function.",
+    image: IMAGES.cavities,
+    benefits: ["Natural appearance", "Strong bond", "Quick procedure", "Long lasting"],
+    process: [
+      { step: "Numbing", detail: "Gentle local anaesthesia." },
+      { step: "Decay Removal", detail: "Careful removal of damaged tissue." },
+      { step: "Filling", detail: "Composite material shaped and bonded." },
+      { step: "Polish", detail: "Smooth finish for comfortable bite." },
+    ],
+    faqs: [
+      { q: "How long does a filling last?", a: "Composite fillings typically last 7–10+ years." },
+      { q: "Will it match my teeth?", a: "Yes, we shade-match for a seamless look." },
+    ],
+  },
+  {
+    slug: "root-canal-treatment",
+    name: "Root Canal Treatment",
+    short: "Save your natural tooth and relieve pain.",
+    description:
+      "Root canal therapy removes infected pulp from inside a tooth, relieving pain and saving the tooth from extraction.",
+    image: IMAGES.cavities,
+    benefits: ["Saves natural tooth", "Pain relief", "Prevents spread", "Lasting result"],
+    process: [
+      { step: "Diagnosis", detail: "X-ray and clinical examination." },
+      { step: "Access & Clean", detail: "Infected pulp removed, canals cleaned." },
+      { step: "Sealing", detail: "Canals filled and sealed." },
+      { step: "Crown", detail: "Protective crown placed if needed." },
+    ],
+    faqs: [
+      { q: "Is it painful?", a: "Modern techniques make it as comfortable as a filling." },
+      { q: "How many visits?", a: "Usually 1–2 visits depending on complexity." },
+    ],
+  },
+  {
+    slug: "tooth-extraction",
+    name: "Tooth Extraction",
+    short: "Gentle removal of teeth that cannot be saved.",
+    description:
+      "When a tooth is beyond repair, we perform comfortable extractions with care to ensure quick healing.",
+    image: IMAGES.clinic,
+    benefits: ["Pain relief", "Prevents infection", "Quick procedure", "Gentle technique"],
+    process: [
+      { step: "Anaesthesia", detail: "Local numbing for comfort." },
+      { step: "Extraction", detail: "Careful removal of the tooth." },
+      { step: "Aftercare", detail: "Gauze and clear instructions." },
+      { step: "Follow-up", detail: "Healing review and replacement options." },
+    ],
+    faqs: [
+      { q: "Will I feel pain?", a: "The area is numbed; you feel pressure not pain." },
+      { q: "Recovery time?", a: "Initial healing within 3–7 days." },
+    ],
+  },
+  {
+    slug: "surgical-extraction",
+    name: "Surgical Extraction",
+    short: "Advanced removal for impacted or complex cases.",
+    description:
+      "Surgical extractions handle impacted wisdom teeth and broken roots safely with expert technique.",
+    image: IMAGES.clinic,
+    benefits: ["Resolves impactions", "Prevents complications", "Expert care", "Modern equipment"],
+    process: [
+      { step: "Imaging", detail: "Detailed X-rays or CBCT scan." },
+      { step: "Sedation", detail: "Comfort-focused anaesthesia." },
+      { step: "Surgery", detail: "Careful surgical removal." },
+      { step: "Recovery", detail: "Detailed aftercare plan." },
+    ],
+    faqs: [
+      { q: "Sedation options?", a: "Local anaesthesia with optional sedation available." },
+      { q: "Healing time?", a: "Typically 1–2 weeks for full healing." },
+    ],
+  },
+  {
+    slug: "veneers",
+    name: "Veneers",
+    short: "Custom porcelain veneers for a flawless smile.",
+    description:
+      "Veneers are ultra-thin porcelain shells bonded to the front of teeth to transform shape, colour and alignment.",
+    image: IMAGES.veneersBA,
+    benefits: ["Flawless aesthetics", "Stain resistant", "Natural look", "Long lasting"],
+    process: [
+      { step: "Smile Design", detail: "Digital preview of your new smile." },
+      { step: "Preparation", detail: "Minimal tooth preparation." },
+      { step: "Fabrication", detail: "Custom porcelain veneers crafted." },
+      { step: "Bonding", detail: "Secure final placement." },
+    ],
+    faqs: [
+      { q: "How long do veneers last?", a: "10–15+ years with good care." },
+      { q: "Are they reversible?", a: "Minimal enamel removal makes them permanent." },
+    ],
+  },
+  {
+    slug: "fixed-dentures",
+    name: "Fixed Dentures (Crowns & Bridges)",
+    short: "Permanent crowns and bridges that look natural.",
+    description:
+      "Replace missing or damaged teeth with custom crowns and bridges that restore function and aesthetics.",
+    image: IMAGES.dentures,
+    benefits: ["Permanent fix", "Natural feel", "Restores chewing", "Beautiful smile"],
+    process: [
+      { step: "Preparation", detail: "Adjacent teeth prepared." },
+      { step: "Impressions", detail: "Precise digital scans." },
+      { step: "Temporary", detail: "Temporary crown while lab fabricates." },
+      { step: "Final Fit", detail: "Permanent cementation." },
+    ],
+    faqs: [
+      { q: "How long do they last?", a: "15+ years with proper care." },
+      { q: "Will it match?", a: "Custom shade matching for natural look." },
+    ],
+  },
+  {
+    slug: "removable-dentures",
+    name: "Removable Dentures",
+    short: "Comfortable full or partial removable dentures.",
+    description:
+      "Restore your smile and chewing function with custom-fitted removable dentures crafted for comfort.",
+    image: IMAGES.dentures,
+    benefits: ["Affordable", "Restores function", "Natural look", "Easy maintenance"],
+    process: [
+      { step: "Consultation", detail: "Comprehensive assessment." },
+      { step: "Impressions", detail: "Custom-fit mould." },
+      { step: "Try-in", detail: "Wax try-in for adjustments." },
+      { step: "Delivery", detail: "Final dentures and care guide." },
+    ],
+    faqs: [
+      { q: "Adjustment period?", a: "Typically 2–4 weeks to feel fully comfortable." },
+      { q: "How to clean?", a: "Daily brushing and overnight soaking." },
+    ],
+  },
+  {
+    slug: "dental-retainers",
+    name: "Dental Retainers",
+    short: "Custom retainers to keep your smile in place.",
+    description:
+      "After orthodontic treatment, retainers maintain your beautiful new alignment for life.",
+    image: IMAGES.whiteningProcess,
+    benefits: ["Maintains alignment", "Custom fit", "Discreet", "Durable"],
+    process: [
+      { step: "Scan", detail: "Digital impression." },
+      { step: "Fabrication", detail: "Custom retainer made." },
+      { step: "Fitting", detail: "Comfort check and adjustments." },
+      { step: "Instructions", detail: "Care and wear guidance." },
+    ],
+    faqs: [
+      { q: "How long to wear?", a: "Full-time initially, then nights only." },
+      { q: "How to clean?", a: "Brush gently and soak as advised." },
+    ],
+  },
+  {
+    slug: "childrens-dentistry",
+    name: "Children's Dentistry",
+    short: "Gentle dental care designed for kids.",
+    description:
+      "Friendly, gentle dental care to help children build healthy habits and love visiting the dentist.",
+    image: IMAGES.childSmile,
+    benefits: ["Kid-friendly", "Preventive focus", "Education", "Gentle care"],
+    process: [
+      { step: "Welcome", detail: "Friendly intro to the clinic." },
+      { step: "Examination", detail: "Gentle child-focused checkup." },
+      { step: "Cleaning", detail: "Fun, comfortable cleaning." },
+      { step: "Education", detail: "Brushing and habits guidance." },
+    ],
+    faqs: [
+      { q: "First visit age?", a: "By age 1 or first tooth eruption." },
+      { q: "How often?", a: "Every 6 months." },
+    ],
+  },
+  {
+    slug: "emergency-dental-care",
+    name: "Emergency Dental Care",
+    short: "Same-day urgent dental treatment.",
+    description:
+      "We provide rapid emergency dental care for severe pain, trauma, swelling and broken teeth.",
+    image: IMAGES.clinic,
+    benefits: ["Same-day care", "Pain relief", "Trauma management", "24/7 hotline"],
+    process: [
+      { step: "Call", detail: "Reach our emergency line." },
+      { step: "Triage", detail: "Quick clinical assessment." },
+      { step: "Treatment", detail: "Immediate pain relief and care." },
+      { step: "Follow-up", detail: "Comprehensive treatment plan." },
+    ],
+    faqs: [
+      { q: "What counts as emergency?", a: "Severe pain, trauma, swelling, bleeding." },
+      { q: "Can I come without booking?", a: "Yes, call us first for fastest service." },
+    ],
+  },
+  {
+    slug: "gum-disease-treatment",
+    name: "Gum Disease Treatment",
+    short: "Restore healthy gums and prevent tooth loss.",
+    description:
+      "From early gingivitis to advanced periodontitis, we offer effective treatment to restore gum health.",
+    image: IMAGES.whiteningBA,
+    benefits: ["Saves teeth", "Reduces inflammation", "Improves health", "Fresh breath"],
+    process: [
+      { step: "Assessment", detail: "Periodontal charting." },
+      { step: "Deep Cleaning", detail: "Scaling and root planing." },
+      { step: "Therapy", detail: "Antimicrobial treatment if needed." },
+      { step: "Maintenance", detail: "Regular periodontal reviews." },
+    ],
+    faqs: [
+      { q: "Is gum disease reversible?", a: "Early stages yes, advanced is manageable." },
+      { q: "Signs to watch?", a: "Bleeding, swelling, persistent bad breath." },
+    ],
+  },
+  {
+    slug: "smile-makeovers",
+    name: "Smile Makeovers",
+    short: "Total transformation of your smile.",
+    description:
+      "A combination of cosmetic treatments tailored to give you the smile of your dreams.",
+    image: IMAGES.veneersBA,
+    benefits: ["Complete transformation", "Custom plan", "Boosts confidence", "Long-lasting"],
+    process: [
+      { step: "Consultation", detail: "Goals and smile analysis." },
+      { step: "Design", detail: "Digital smile preview." },
+      { step: "Treatment", detail: "Combination of procedures." },
+      { step: "Reveal", detail: "Your dream smile delivered." },
+    ],
+    faqs: [
+      { q: "How long does it take?", a: "Anywhere from weeks to a few months." },
+      { q: "Is it painful?", a: "Most steps are comfortable with minimal downtime." },
+    ],
+  },
+];
+
+export const BLOG_POSTS = [
+  { slug: "benefits-of-teeth-cleaning", title: "Benefits of Teeth Cleaning", excerpt: "Why a 6-month professional cleaning is essential for healthy gums and a brighter smile.", image: IMAGES.whiteningBA, date: "May 10, 2026", read: "4 min" },
+  { slug: "how-braces-improve-your-smile", title: "How Braces Improve Your Smile", excerpt: "Modern orthodontics straightens teeth and corrects bite issues for life-long confidence.", image: IMAGES.whiteningProcess, date: "May 02, 2026", read: "6 min" },
+  { slug: "understanding-root-canal-treatment", title: "Understanding Root Canal Treatment", excerpt: "Save your natural tooth with virtually pain-free modern root canal therapy.", image: IMAGES.cavities, date: "Apr 18, 2026", read: "5 min" },
+  { slug: "dental-hygiene-tips", title: "Daily Dental Hygiene Tips", excerpt: "Simple habits to keep your smile healthy, white and cavity-free at home.", image: IMAGES.smile1, date: "Apr 05, 2026", read: "3 min" },
+  { slug: "childrens-dental-care-guide", title: "Children's Dental Care Guide", excerpt: "How to nurture healthy dental habits from your child's very first tooth.", image: IMAGES.childSmile, date: "Mar 22, 2026", read: "5 min" },
+  { slug: "when-should-you-visit-a-dentist", title: "When Should You Visit a Dentist?", excerpt: "Symptoms you should never ignore — and routine visits that protect your smile.", image: IMAGES.dentist, date: "Mar 14, 2026", read: "4 min" },
+  { slug: "how-veneers-transform-smiles", title: "How Veneers Transform Smiles", excerpt: "Veneers can correct shape, colour and alignment in just a few visits.", image: IMAGES.veneersBA, date: "Feb 28, 2026", read: "6 min" },
+  { slug: "preventing-gum-disease", title: "Preventing Gum Disease", excerpt: "Early signs of gum disease and the proven steps to reverse them.", image: IMAGES.whiteningBA, date: "Feb 12, 2026", read: "5 min" },
+];
+
+export const TESTIMONIALS = [
+  { name: "Achieng O.", text: "The team transformed my smile with veneers. I finally have the confidence to smile in every photo!", image: IMAGES.smile1, rating: 5, treatment: "Veneers" },
+  { name: "Brian K.", text: "Professional, friendly and gentle. My root canal was painless — I can't recommend Lebanon Dental Care enough.", image: IMAGES.smile2, rating: 5, treatment: "Root Canal" },
+  { name: "Mary W.", text: "My kids actually look forward to dental visits now. The pediatric team is amazing.", image: IMAGES.childSmile, rating: 5, treatment: "Children's Dentistry" },
+  { name: "Joseph M.", text: "Whitening results blew me away. Same-day appointment and modern equipment.", image: IMAGES.whiteningBA, rating: 5, treatment: "Teeth Whitening" },
+  { name: "Faith N.", text: "The most thorough cleaning I've ever had. My gums feel brand new.", image: IMAGES.dentist, rating: 5, treatment: "Teeth Cleaning" },
+  { name: "Daniel A.", text: "Emergency care saved my tooth after an accident. Forever grateful.", image: IMAGES.clinic, rating: 5, treatment: "Emergency Care" },
+];

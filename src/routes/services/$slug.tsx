@@ -39,7 +39,7 @@ export const Route = createFileRoute("/services/$slug")({
 });
 
 function ServiceDetailPage() {
-  const s = Route.useLoaderData();
+  const s = Route.useLoaderData() as (typeof SERVICES)[number];
   const wa = buildWhatsAppUrl(`Hello Lebanon Dental Care, I'd like to book ${s.name}.`);
 
   return (

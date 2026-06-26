@@ -7,14 +7,23 @@ import img7 from "@/assets/image-7.asset.json";
 import img8 from "@/assets/image-8.asset.json";
 import img9 from "@/assets/image-9.asset.json";
 import img10 from "@/assets/image-10.asset.json";
+import img11 from "@/assets/image-11.asset.json";
+import img12 from "@/assets/image-12.asset.json";
+import img13 from "@/assets/image-13.asset.json";
+import img14 from "@/assets/image-14.asset.json";
+import img15 from "@/assets/image-15.asset.json";
+import img16 from "@/assets/image-16.asset.json";
+import img17 from "@/assets/image-17.asset.json";
+import img18 from "@/assets/image-18.asset.json";
+import img19 from "@/assets/image-19.asset.json";
 import clinic from "@/assets/clinic-interior.jpg";
 import dentist from "@/assets/dentist-portrait.jpg";
 import smile1 from "@/assets/smile-1.jpg";
 import smile2 from "@/assets/smile-2.jpg";
 
-export const LOGO = img1.url;
+export const LOGO = img19.url;
 export const IMAGES = {
-  logo: img1.url,
+  logo: img19.url,
   cavities: img3.url,
   childCheckup: img4.url,
   whiteningBA: img5.url,
@@ -23,6 +32,14 @@ export const IMAGES = {
   boyDentist: img8.url,
   whiteningProcess: img9.url,
   dentures: img10.url,
+  bracesGirl: img11.url,
+  removableAppliances: img12.url,
+  rootCanal: img13.url,
+  toothExtraction: img14.url,
+  surgicalExtraction: img15.url,
+  fixedDenturesBA: img16.url,
+  retainersGuide: img17.url,
+  gumDisease: img18.url,
   clinic,
   dentist,
   smile1,

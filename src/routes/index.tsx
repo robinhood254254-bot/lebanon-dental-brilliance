@@ -88,7 +88,7 @@ function HomePage() {
       <section className="relative overflow-hidden">
         <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary/20 blur-3xl" />
         <div className="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-primary/20 blur-3xl" />
-        <div className="container-page py-12 md:py-20 relative grid gap-10 lg:grid-cols-2 items-center">
+        <div className="container-page py-6 md:py-10 relative grid gap-8 lg:grid-cols-2 items-center">
           <div className="animate-fade-up">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent text-secondary text-xs font-semibold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" /> Your Smile, Our Priority

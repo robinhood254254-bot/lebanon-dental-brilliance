@@ -16,14 +16,16 @@ import img16 from "@/assets/image-16.asset.json";
 import img17 from "@/assets/image-17.asset.json";
 import img18 from "@/assets/image-18.asset.json";
 import img19 from "@/assets/image-19.asset.json";
+import logo from "@/assets/logo.asset.json";
 import clinic from "@/assets/clinic-interior.jpg";
 import dentist from "@/assets/dentist-portrait.jpg";
 import smile1 from "@/assets/smile-1.jpg";
 import smile2 from "@/assets/smile-2.jpg";
 
-export const LOGO = img19.url;
+export const LOGO = logo.url;
 export const IMAGES = {
-  logo: img19.url,
+  logo: logo.url,
+  logoFull: img19.url,
   cavities: img3.url,
   childCheckup: img4.url,
   whiteningBA: img5.url,

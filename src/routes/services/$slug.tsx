@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, Calendar, CheckCircle2, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
-import { CLINIC, IMAGES, SERVICES, buildWhatsAppUrl } from "@/data/clinic";
+import { CLINIC, SERVICES, buildWhatsAppUrl } from "@/data/clinic";
 
 export const Route = createFileRoute("/services/$slug")({
   loader: ({ params }) => {

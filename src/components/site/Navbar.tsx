@@ -30,12 +30,8 @@ export function Navbar() {
       }`}
     >
       <div className="container-page flex items-center justify-between py-3">
-        <Link to="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
-          <img src={LOGO} alt="Lebanon Dental Care Clinic" className="h-16 md:h-20 w-auto" />
-          <div className="hidden md:block leading-tight">
-            <div className="font-display font-black text-lg text-foreground tracking-wide uppercase">Lebanon Dental</div>
-            <div className="text-[11px] font-semibold text-secondary uppercase tracking-[0.25em]">Care Clinic</div>
-          </div>
+        <Link to="/" className="flex items-center gap-2 shrink-0" onClick={() => setOpen(false)} aria-label="Lebanon Dental Care">
+          <img src={LOGO} alt="Lebanon Dental Care" className="h-14 sm:h-16 md:h-20 w-auto" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">

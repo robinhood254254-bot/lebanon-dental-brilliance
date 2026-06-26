@@ -46,17 +46,17 @@ function ServiceDetailPage() {
     <SiteLayout>
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-dark text-white">
-        <img src={s.image} alt="" className="absolute inset-0 w-full h-full object-cover opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent" />
-        <div className="container-page py-20 relative">
+        <img src={s.image} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
+        <div className="container-page py-12 md:py-16 relative">
           <Link to="/services" className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm">
             <ArrowLeft className="w-4 h-4" /> All Services
           </Link>
-          <h1 className="mt-4 text-4xl md:text-5xl font-display font-extrabold max-w-3xl">{s.name}</h1>
-          <p className="mt-4 text-white/85 max-w-2xl">{s.description}</p>
-          <div className="mt-6 flex flex-wrap gap-3">
+          <h1 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-display font-extrabold max-w-3xl">{s.name}</h1>
+          <p className="mt-3 text-white/85 max-w-2xl">{s.description}</p>
+          <div className="mt-5 flex flex-wrap gap-3">
             <Link to="/book" className="inline-flex items-center gap-2 bg-gradient-brand text-white px-6 py-3 rounded-full font-semibold shadow-brand">
-              <Calendar className="w-5 h-5" /> Book Appointment
+              <Calendar className="w-5 h-5" /> Book This Service
             </Link>
             <a href={wa} target="_blank" rel="noopener" className="inline-flex items-center gap-2 bg-[var(--whatsapp)] text-white px-6 py-3 rounded-full font-semibold">
               <MessageCircle className="w-5 h-5" /> WhatsApp Us
@@ -65,12 +65,19 @@ function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="container-page py-16 grid lg:grid-cols-2 gap-10 items-center">
-        <img src={s.image} alt={s.name} loading="lazy" className="rounded-3xl shadow-card aspect-[4/3] object-cover w-full" />
+      {/* Service image + benefits */}
+      <section className="container-page py-12 grid lg:grid-cols-2 gap-8 items-center">
+        <div className="max-w-md mx-auto w-full">
+          <img
+            src={s.image}
+            alt={s.name}
+            loading="lazy"
+            className="rounded-2xl shadow-card aspect-[4/3] object-cover w-full"
+          />
+        </div>
         <div>
           <div className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">Why Choose This Treatment</div>
-          <h2 className="mt-2 text-3xl font-display font-bold">Benefits</h2>
+          <h2 className="mt-2 text-2xl md:text-3xl font-display font-bold">Benefits</h2>
           <ul className="mt-5 grid sm:grid-cols-2 gap-3">
             {s.benefits.map((b) => (
               <li key={b} className="flex items-start gap-2 bg-accent/50 px-4 py-3 rounded-xl">
@@ -83,11 +90,11 @@ function ServiceDetailPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-gradient-brand-soft py-16">
+      <section className="bg-gradient-brand-soft py-14">
         <div className="container-page">
           <div className="text-center max-w-2xl mx-auto">
-            <div className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">Treatment Process</div>
-            <h2 className="mt-2 text-3xl font-display font-bold">What To Expect</h2>
+            <div className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">How This Service Works</div>
+            <h2 className="mt-2 text-2xl md:text-3xl font-display font-bold">What To Expect</h2>
           </div>
           <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {s.process.map((p, i) => (
@@ -101,18 +108,6 @@ function ServiceDetailPage() {
         </div>
       </section>
 
-      {/* Before / After */}
-      <section className="container-page py-16">
-        <div className="text-center max-w-2xl mx-auto">
-          <div className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">Real Results</div>
-          <h2 className="mt-2 text-3xl font-display font-bold">Before & After</h2>
-        </div>
-        <div className="mt-8 grid md:grid-cols-2 gap-5">
-          {[IMAGES.whiteningBA, IMAGES.veneersBA].map((img, i) => (
-            <img key={i} src={img} alt="Before and after" loading="lazy" className="w-full rounded-2xl shadow-card aspect-[4/5] object-cover" />
-          ))}
-        </div>
-      </section>
 
       {/* FAQs */}
       <section className="bg-muted py-16">

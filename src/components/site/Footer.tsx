@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container-page py-14 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-2 mb-4">
-            <img src={LOGO} alt="Lebanon Dental Care" className="h-12 w-12 rounded-xl bg-black p-1" />
+            <img src={LOGO} alt="Lebanon Dental Care Clinic" className="h-20 w-auto bg-white rounded-xl p-2" />
             <div>
               <div className="font-display font-bold">{CLINIC.name}</div>
               <div className="text-xs text-white/60">{CLINIC.tagline}</div>

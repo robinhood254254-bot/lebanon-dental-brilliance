@@ -123,7 +123,7 @@ export const SERVICES: Service[] = [
     short: "Traditional braces that align your smile beautifully.",
     description:
       "Our fixed braces use modern brackets and wires to gradually straighten teeth and correct bite issues for a confident, lasting smile.",
-    image: IMAGES.whiteningProcess,
+    image: IMAGES.bracesGirl,
     benefits: ["Permanent correction", "Improves bite", "Boosts confidence", "Affordable plans"],
     process: [
       { step: "Assessment", detail: "Comprehensive orthodontic evaluation and X-rays." },
@@ -142,7 +142,7 @@ export const SERVICES: Service[] = [
     short: "Discreet, removable aligners and appliances.",
     description:
       "Removable appliances offer flexibility for minor corrections, growth guidance in children and post-treatment retention.",
-    image: IMAGES.childCheckup,
+    image: IMAGES.removableAppliances,
     benefits: ["Removable for eating", "Easy hygiene", "Comfortable", "Discreet"],
     process: [
       { step: "Impressions", detail: "Digital scans of your teeth." },
@@ -180,7 +180,7 @@ export const SERVICES: Service[] = [
     short: "Save your natural tooth and relieve pain.",
     description:
       "Root canal therapy removes infected pulp from inside a tooth, relieving pain and saving the tooth from extraction.",
-    image: IMAGES.cavities,
+    image: IMAGES.rootCanal,
     benefits: ["Saves natural tooth", "Pain relief", "Prevents spread", "Lasting result"],
     process: [
       { step: "Diagnosis", detail: "X-ray and clinical examination." },
@@ -199,7 +199,7 @@ export const SERVICES: Service[] = [
     short: "Gentle removal of teeth that cannot be saved.",
     description:
       "When a tooth is beyond repair, we perform comfortable extractions with care to ensure quick healing.",
-    image: IMAGES.clinic,
+    image: IMAGES.toothExtraction,
     benefits: ["Pain relief", "Prevents infection", "Quick procedure", "Gentle technique"],
     process: [
       { step: "Anaesthesia", detail: "Local numbing for comfort." },
@@ -218,7 +218,7 @@ export const SERVICES: Service[] = [
     short: "Advanced removal for impacted or complex cases.",
     description:
       "Surgical extractions handle impacted wisdom teeth and broken roots safely with expert technique.",
-    image: IMAGES.clinic,
+    image: IMAGES.surgicalExtraction,
     benefits: ["Resolves impactions", "Prevents complications", "Expert care", "Modern equipment"],
     process: [
       { step: "Imaging", detail: "Detailed X-rays or CBCT scan." },
@@ -256,7 +256,7 @@ export const SERVICES: Service[] = [
     short: "Permanent crowns and bridges that look natural.",
     description:
       "Replace missing or damaged teeth with custom crowns and bridges that restore function and aesthetics.",
-    image: IMAGES.dentures,
+    image: IMAGES.fixedDenturesBA,
     benefits: ["Permanent fix", "Natural feel", "Restores chewing", "Beautiful smile"],
     process: [
       { step: "Preparation", detail: "Adjacent teeth prepared." },
@@ -294,7 +294,7 @@ export const SERVICES: Service[] = [
     short: "Custom retainers to keep your smile in place.",
     description:
       "After orthodontic treatment, retainers maintain your beautiful new alignment for life.",
-    image: IMAGES.whiteningProcess,
+    image: IMAGES.retainersGuide,
     benefits: ["Maintains alignment", "Custom fit", "Discreet", "Durable"],
     process: [
       { step: "Scan", detail: "Digital impression." },
@@ -351,7 +351,7 @@ export const SERVICES: Service[] = [
     short: "Restore healthy gums and prevent tooth loss.",
     description:
       "From early gingivitis to advanced periodontitis, we offer effective treatment to restore gum health.",
-    image: IMAGES.whiteningBA,
+    image: IMAGES.gumDisease,
     benefits: ["Saves teeth", "Reduces inflammation", "Improves health", "Fresh breath"],
     process: [
       { step: "Assessment", detail: "Periodontal charting." },

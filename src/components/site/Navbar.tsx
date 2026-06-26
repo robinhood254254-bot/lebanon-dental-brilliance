@@ -30,11 +30,11 @@ export function Navbar() {
       }`}
     >
       <div className="container-page flex items-center justify-between py-3">
-        <Link to="/" className="flex items-center gap-2 shrink-0" onClick={() => setOpen(false)}>
-          <img src={LOGO} alt="Lebanon Dental Care" className="h-12 w-12 rounded-xl bg-black p-1" />
-          <div className="hidden sm:block leading-tight">
-            <div className="font-display font-bold text-base text-foreground">Lebanon Dental</div>
-            <div className="text-[11px] text-muted-foreground uppercase tracking-widest">Care Clinic</div>
+        <Link to="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
+          <img src={LOGO} alt="Lebanon Dental Care Clinic" className="h-16 md:h-20 w-auto" />
+          <div className="hidden md:block leading-tight">
+            <div className="font-display font-black text-lg text-foreground tracking-wide uppercase">Lebanon Dental</div>
+            <div className="text-[11px] font-semibold text-secondary uppercase tracking-[0.25em]">Care Clinic</div>
           </div>
         </Link>
 

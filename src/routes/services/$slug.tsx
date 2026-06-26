@@ -139,7 +139,7 @@ function ServiceDetailPage() {
           </div>
           <div className="flex flex-wrap gap-3">
             <Link to="/book" className="inline-flex items-center gap-2 bg-white text-secondary px-6 py-3 rounded-full font-bold">
-              <Calendar className="w-5 h-5" /> Book Now <ArrowRight className="w-4 h-4" />
+              <Calendar className="w-5 h-5" /> Book This Service <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>

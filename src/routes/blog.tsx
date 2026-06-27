@@ -22,7 +22,7 @@ function BlogPage() {
     <SiteLayout>
       <PageHero eyebrow="Blog" title="Dental Tips & Healthy Smile Guides" subtitle="Stay informed with expert articles from our clinical team." />
       <section className="container-page py-16">
-        <Link to="/blog" className="group block bg-card rounded-3xl overflow-hidden border border-border shadow-card hover:shadow-brand transition mb-10">
+        <Link to="/blog/$slug" params={{ slug: feat.slug }} className="group block bg-card rounded-3xl overflow-hidden border border-border shadow-card hover:shadow-brand transition mb-10">
           <div className="grid md:grid-cols-2">
             <div className="aspect-[16/10] overflow-hidden">
               <img src={feat.image} alt={feat.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
@@ -41,7 +41,7 @@ function BlogPage() {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {rest.map((p) => (
-            <article key={p.slug} className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-card transition">
+            <Link key={p.slug} to="/blog/$slug" params={{ slug: p.slug }} className="group block bg-card rounded-2xl overflow-hidden border border-border hover:shadow-card transition">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src={p.image} alt={p.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               </div>
@@ -53,7 +53,7 @@ function BlogPage() {
                 <p className="mt-1.5 text-sm text-muted-foreground line-clamp-2">{p.excerpt}</p>
                 <span className="mt-3 inline-flex items-center gap-1 text-primary font-semibold text-sm">Read more <ArrowRight className="w-4 h-4" /></span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </section>

@@ -1,0 +1,25 @@
+# Lebanon Dental Care Clinic
+
+> Trusted dental clinic in Kenya offering braces, veneers, cleanings, root canals, extractions, children's dentistry and emergency dental care.
+
+Lebanon Dental Care Clinic provides comprehensive, modern dental treatment with over 10 years of experience and 1,000+ happy patients. Our mission is to deliver gentle, professional care that protects every patient's long-term oral health.
+
+## Pages
+- [Home](/): Overview of services, experience and patient testimonials
+- [About Us](/about): Our story, team and approach to dental care
+- [Services](/services): Full list of dental treatments offered
+- [Book Appointment](/book): Online booking with WhatsApp confirmation
+- [Blog](/blog): Dental tips, treatment guides and oral health advice
+- [Testimonials](/testimonials): Real reviews from our patients
+- [Contact](/contact): Location, hours and emergency line
+
+## Services
+- [Teeth Cleaning](/services/teeth-cleaning)
+- [Fixed Orthodontics (Braces)](/services/fixed-orthodontics)
+- [Root Canal Treatment](/services/root-canal-treatment)
+- [Tooth Extraction](/services/tooth-extraction)
+- [Veneers](/services/veneers)
+- [Fixed Dentures](/services/fixed-dentures)
+- [Gum Disease Treatment](/services/gum-disease-treatment)
+- [Children's Dentistry](/services/childrens-dentistry)
+- [Emergency Dental Care](/services/emergency-dental-care)

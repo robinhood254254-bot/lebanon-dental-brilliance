@@ -1,49 +1,51 @@
-import img1 from "@/assets/image.asset.json";
-import img3 from "@/assets/image-3.asset.json";
-import img4 from "@/assets/image-4.asset.json";
-import img5 from "@/assets/image-5.asset.json";
-import img6 from "@/assets/image-6.asset.json";
-import img7 from "@/assets/image-7.asset.json";
-import img8 from "@/assets/image-8.asset.json";
-import img9 from "@/assets/image-9.asset.json";
-import img10 from "@/assets/image-10.asset.json";
-import img11 from "@/assets/image-11.asset.json";
-import img12 from "@/assets/image-12.asset.json";
-import img13 from "@/assets/image-13.asset.json";
-import img14 from "@/assets/image-14.asset.json";
-import img15 from "@/assets/image-15.asset.json";
-import img16 from "@/assets/image-16.asset.json";
-import img17 from "@/assets/image-17.asset.json";
-import img18 from "@/assets/image-18.asset.json";
-import img19 from "@/assets/image-19.asset.json";
-import logo from "@/assets/logo.asset.json";
-import forceps from "@/assets/forceps.asset.json";
+import img1 from "@/assets/image.png";
+import img3 from "@/assets/image-3.png";
+import img4 from "@/assets/image-4.png";
+import img5 from "@/assets/image-5.png";
+import img6 from "@/assets/image-6.png";
+import img7 from "@/assets/image-7.png";
+import img8 from "@/assets/image-8.png";
+import img9 from "@/assets/image-9.png";
+import img10 from "@/assets/image-10.png";
+import img11 from "@/assets/image-11.png";
+import img12 from "@/assets/image-12.png";
+import img13 from "@/assets/image-13.png";
+import img14 from "@/assets/image-14.png";
+import img15 from "@/assets/image-15.png";
+import img16 from "@/assets/image-16.png";
+import img17 from "@/assets/image-17.png";
+import img18 from "@/assets/image-18.png";
+import img19 from "@/assets/image-19.png";
+import logo from "@/assets/logo.png";
+import forceps from "@/assets/forceps.png";
 import clinic from "@/assets/clinic-interior.jpg";
 import dentist from "@/assets/dentist-portrait.jpg";
 import smile1 from "@/assets/smile-1.jpg";
 import smile2 from "@/assets/smile-2.jpg";
 
-export const LOGO = logo.url;
+void img1;
+
+export const LOGO = logo;
 export const IMAGES = {
-  logo: logo.url,
-  logoFull: img19.url,
-  cavities: img3.url,
-  childCheckup: img4.url,
-  whiteningBA: img5.url,
-  veneersBA: img6.url,
-  childSmile: img7.url,
-  boyDentist: img8.url,
-  whiteningProcess: img9.url,
-  dentures: img10.url,
-  bracesGirl: img11.url,
-  removableAppliances: img12.url,
-  rootCanal: img13.url,
-  toothExtraction: img14.url,
-  surgicalExtraction: img15.url,
-  fixedDenturesBA: img16.url,
-  retainersGuide: img17.url,
-  gumDisease: img18.url,
-  equipment: forceps.url,
+  logo,
+  logoFull: img19,
+  cavities: img3,
+  childCheckup: img4,
+  whiteningBA: img5,
+  veneersBA: img6,
+  childSmile: img7,
+  boyDentist: img8,
+  whiteningProcess: img9,
+  dentures: img10,
+  bracesGirl: img11,
+  removableAppliances: img12,
+  rootCanal: img13,
+  toothExtraction: img14,
+  surgicalExtraction: img15,
+  fixedDenturesBA: img16,
+  retainersGuide: img17,
+  gumDisease: img18,
+  equipment: forceps,
   clinic,
   dentist,
   smile1,

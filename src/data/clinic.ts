@@ -17,6 +17,7 @@ import img17 from "@/assets/image-17.asset.json";
 import img18 from "@/assets/image-18.asset.json";
 import img19 from "@/assets/image-19.asset.json";
 import logo from "@/assets/logo.asset.json";
+import forceps from "@/assets/forceps.asset.json";
 import clinic from "@/assets/clinic-interior.jpg";
 import dentist from "@/assets/dentist-portrait.jpg";
 import smile1 from "@/assets/smile-1.jpg";
@@ -42,6 +43,7 @@ export const IMAGES = {
   fixedDenturesBA: img16.url,
   retainersGuide: img17.url,
   gumDisease: img18.url,
+  equipment: forceps.url,
   clinic,
   dentist,
   smile1,
@@ -387,15 +389,121 @@ export const SERVICES: Service[] = [
   },
 ];
 
-export const BLOG_POSTS = [
-  { slug: "benefits-of-teeth-cleaning", title: "Benefits of Teeth Cleaning", excerpt: "Why a 6-month professional cleaning is essential for healthy gums and a brighter smile.", image: IMAGES.whiteningBA, date: "May 10, 2026", read: "4 min" },
-  { slug: "how-braces-improve-your-smile", title: "How Braces Improve Your Smile", excerpt: "Modern orthodontics straightens teeth and corrects bite issues for life-long confidence.", image: IMAGES.whiteningProcess, date: "May 02, 2026", read: "6 min" },
-  { slug: "understanding-root-canal-treatment", title: "Understanding Root Canal Treatment", excerpt: "Save your natural tooth with virtually pain-free modern root canal therapy.", image: IMAGES.cavities, date: "Apr 18, 2026", read: "5 min" },
-  { slug: "dental-hygiene-tips", title: "Daily Dental Hygiene Tips", excerpt: "Simple habits to keep your smile healthy, white and cavity-free at home.", image: IMAGES.smile1, date: "Apr 05, 2026", read: "3 min" },
-  { slug: "childrens-dental-care-guide", title: "Children's Dental Care Guide", excerpt: "How to nurture healthy dental habits from your child's very first tooth.", image: IMAGES.childSmile, date: "Mar 22, 2026", read: "5 min" },
-  { slug: "when-should-you-visit-a-dentist", title: "When Should You Visit a Dentist?", excerpt: "Symptoms you should never ignore — and routine visits that protect your smile.", image: IMAGES.dentist, date: "Mar 14, 2026", read: "4 min" },
-  { slug: "how-veneers-transform-smiles", title: "How Veneers Transform Smiles", excerpt: "Veneers can correct shape, colour and alignment in just a few visits.", image: IMAGES.veneersBA, date: "Feb 28, 2026", read: "6 min" },
-  { slug: "preventing-gum-disease", title: "Preventing Gum Disease", excerpt: "Early signs of gum disease and the proven steps to reverse them.", image: IMAGES.whiteningBA, date: "Feb 12, 2026", read: "5 min" },
+export type BlogPost = {
+  slug: string;
+  title: string;
+  excerpt: string;
+  image: string;
+  date: string;
+  read: string;
+  content: string[];
+};
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    slug: "benefits-of-teeth-cleaning",
+    title: "Benefits of Teeth Cleaning",
+    excerpt: "Why a 6-month professional cleaning is essential for healthy gums and a brighter smile.",
+    image: IMAGES.whiteningBA,
+    date: "May 10, 2026",
+    read: "4 min",
+    content: [
+      "Professional teeth cleaning is one of the simplest and most effective ways to protect your oral health. Even with diligent brushing and flossing, plaque and tartar build up in places a toothbrush cannot reach — especially along the gumline and between the back teeth. Left alone, this hardened deposit irritates the gums and is the leading cause of tooth decay and gum disease.",
+      "During a cleaning at Lebanon Dental Care, our hygienists use ultrasonic scalers to gently lift away tartar, followed by a polish that removes surface stains from coffee, tea and tobacco. The result is brighter, smoother teeth and noticeably fresher breath. We finish with a fluoride application that strengthens enamel and helps prevent new cavities for months.",
+      "Most patients benefit from a professional cleaning every six months. If you smoke, have a history of gum disease or wear braces, we may recommend more frequent visits. Regular cleanings cost far less than the fillings, root canals and extractions they help you avoid — making them the single best investment in your long-term smile.",
+    ],
+  },
+  {
+    slug: "how-braces-improve-your-smile",
+    title: "How Braces Improve Your Smile",
+    excerpt: "Modern orthodontics straightens teeth and corrects bite issues for life-long confidence.",
+    image: IMAGES.whiteningProcess,
+    date: "May 02, 2026",
+    read: "6 min",
+    content: [
+      "Braces do far more than straighten crooked teeth. By gradually guiding teeth into their ideal positions, they correct overbites, underbites, crossbites and crowding — all of which can cause uneven wear, jaw pain and difficulty chewing if left untreated. A properly aligned bite also makes brushing and flossing easier, which lowers your risk of cavities and gum disease for the rest of your life.",
+      "At Lebanon Dental Care we offer modern fixed braces with smaller, more comfortable brackets, as well as removable orthodontic appliances for milder cases and growing children. Treatment typically takes 12 to 24 months, with short monthly adjustment visits. Most patients are surprised by how quickly they get used to wearing them and how visible the progress becomes within just a few months.",
+      "The confidence boost that follows is just as important as the clinical result. Patients tell us they smile more freely in photos, speak more openly in meetings and feel better about themselves day to day. After treatment we provide custom retainers so your new smile stays exactly where it should — for good.",
+    ],
+  },
+  {
+    slug: "understanding-root-canal-treatment",
+    title: "Understanding Root Canal Treatment",
+    excerpt: "Save your natural tooth with virtually pain-free modern root canal therapy.",
+    image: IMAGES.cavities,
+    date: "Apr 18, 2026",
+    read: "5 min",
+    content: [
+      "A root canal is needed when the soft pulp inside a tooth becomes infected or inflamed — usually from deep decay, a cracked tooth or repeated dental work. Without treatment the infection spreads, leading to severe pain, swelling and eventual loss of the tooth. The good news is that a root canal saves the tooth and stops the pain almost immediately.",
+      "Modern techniques have made root canal treatment routine and comfortable. We numb the area thoroughly, gently remove the infected pulp, clean and shape the inner canals, then seal them to prevent re-infection. Most patients tell us it feels no different from having a filling, and many sleep that night without pain for the first time in weeks.",
+      "After the canal is sealed, a crown is usually placed to protect the tooth and restore full chewing strength. With good oral hygiene a root-canal-treated tooth can last a lifetime — far better than extraction, which leads to bone loss and the need for an implant or bridge.",
+    ],
+  },
+  {
+    slug: "dental-hygiene-tips",
+    title: "Daily Dental Hygiene Tips",
+    excerpt: "Simple habits to keep your smile healthy, white and cavity-free at home.",
+    image: IMAGES.smile1,
+    date: "Apr 05, 2026",
+    read: "3 min",
+    content: [
+      "Great oral health starts at home. Brush twice a day for a full two minutes with a soft-bristled toothbrush and fluoride toothpaste, paying special attention to the gumline where plaque collects. Replace your brush every three months — or sooner if the bristles look frayed — because a worn brush simply cannot clean effectively.",
+      "Flossing once a day is non-negotiable. It removes the plaque and food particles your brush cannot reach between teeth, where most cavities and gum problems begin. If traditional floss is awkward, interdental brushes or a water flosser work just as well. Pair this with an alcohol-free mouthwash for an extra layer of protection against bacteria.",
+      "Finally, watch what you eat and drink. Sugary snacks, sodas and frequent sipping of acidic drinks dramatically increase your cavity risk. Drink plenty of water, chew sugar-free gum after meals to stimulate saliva, and visit Lebanon Dental Care every six months for a professional checkup and cleaning.",
+    ],
+  },
+  {
+    slug: "childrens-dental-care-guide",
+    title: "Children's Dental Care Guide",
+    excerpt: "How to nurture healthy dental habits from your child's very first tooth.",
+    image: IMAGES.childSmile,
+    date: "Mar 22, 2026",
+    read: "5 min",
+    content: [
+      "Healthy adult teeth begin with healthy baby teeth. Start cleaning your child's mouth even before the first tooth appears by wiping the gums with a soft, damp cloth after feeds. Once that first tooth erupts — usually around six months — switch to a tiny soft-bristled brush with a smear of fluoride toothpaste the size of a grain of rice.",
+      "Your child's first dental visit should happen by their first birthday or within six months of the first tooth. Early visits are short, friendly and focused on prevention. They help your child get used to the clinic, allow us to spot problems early and give parents practical advice on feeding, thumb-sucking and brushing technique.",
+      "As your child grows, lead by example. Brush together, make it fun with songs or timers, and limit sugary snacks and juice. Regular six-monthly checkups, fluoride applications and protective sealants on the back teeth will set your child up for a lifetime of confident, cavity-free smiles.",
+    ],
+  },
+  {
+    slug: "when-should-you-visit-a-dentist",
+    title: "When Should You Visit a Dentist?",
+    excerpt: "Symptoms you should never ignore — and routine visits that protect your smile.",
+    image: IMAGES.dentist,
+    date: "Mar 14, 2026",
+    read: "4 min",
+    content: [
+      "Most people should visit the dentist every six months for a checkup and professional cleaning, even when nothing feels wrong. Many dental problems — cavities, early gum disease, cracked fillings — cause no pain until they are advanced and expensive to fix. Routine visits catch these issues while they are still small and easy to treat.",
+      "Some symptoms call for an immediate appointment. Persistent toothache, sensitivity to hot or cold, bleeding gums, bad breath that won't go away, loose teeth, jaw pain or a swelling on the face all signal a problem that will not resolve on its own. Trauma to a tooth, a knocked-out tooth or a broken filling should be seen the same day.",
+      "If you are pregnant, have diabetes, smoke or are about to start orthodontic treatment, you may need more frequent visits. Call Lebanon Dental Care any time you are unsure — our team will happily advise whether you can wait for your next routine appointment or should be seen sooner.",
+    ],
+  },
+  {
+    slug: "how-veneers-transform-smiles",
+    title: "How Veneers Transform Smiles",
+    excerpt: "Veneers can correct shape, colour and alignment in just a few visits.",
+    image: IMAGES.veneersBA,
+    date: "Feb 28, 2026",
+    read: "6 min",
+    content: [
+      "Veneers are ultra-thin shells of porcelain or composite bonded to the front of your teeth. They are one of the fastest ways to transform a smile because a single set can correct multiple issues at once — discolouration that whitening cannot fix, chips and worn edges, small gaps between teeth, and mild crowding or unevenness.",
+      "The process at Lebanon Dental Care usually takes two or three visits. We start with a consultation where we listen to what you want and design your new smile digitally so you can preview the result. Minimal preparation of the tooth surface follows, impressions are taken, and your custom veneers are crafted in a specialist lab before being precisely bonded into place.",
+      "With good care — twice-daily brushing, flossing and regular checkups — quality porcelain veneers can last 10 to 15 years or longer. They resist staining better than natural enamel, so your bright new smile stays bright. For many of our patients, veneers are the single most life-changing treatment we offer.",
+    ],
+  },
+  {
+    slug: "preventing-gum-disease",
+    title: "Preventing Gum Disease",
+    excerpt: "Early signs of gum disease and the proven steps to reverse them.",
+    image: IMAGES.gumDisease,
+    date: "Feb 12, 2026",
+    read: "5 min",
+    content: [
+      "Gum disease is the leading cause of tooth loss in adults — and yet it is almost entirely preventable. It begins as gingivitis, with symptoms most people dismiss: gums that bleed when brushing, slight redness or puffiness, persistent bad breath. At this stage, professional cleaning and improved home care can fully reverse the damage.",
+      "Left untreated, gingivitis progresses to periodontitis. The infection spreads below the gumline, destroying the bone that holds your teeth in place. Teeth start to feel loose, gums recede and the gaps between teeth widen. Treatment is still possible but becomes more involved, requiring deep cleaning, antimicrobial therapy and sometimes minor surgery.",
+      "Prevention is straightforward: brush twice daily, floss every day, avoid tobacco and visit Lebanon Dental Care every six months. If you have noticed bleeding when you brush, book an appointment now — catching gum disease early is the single best thing you can do to keep your natural teeth for life.",
+    ],
+  },
 ];
 
 export const TESTIMONIALS = [

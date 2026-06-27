@@ -26,7 +26,7 @@ function Slider() {
     return () => clearInterval(t);
   }, []);
   return (
-    <div className="relative aspect-[4/5] sm:aspect-[5/6] rounded-3xl overflow-hidden shadow-brand">
+    <div className="relative aspect-[16/10] sm:aspect-[16/10] lg:aspect-[5/6] rounded-3xl overflow-hidden shadow-brand">
       {slides.map((s, idx) => (
         <img
           key={s}
@@ -183,8 +183,8 @@ function HomePage() {
       {/* WHY US */}
       <section className="bg-gradient-brand-soft py-16">
         <div className="container-page grid lg:grid-cols-2 gap-12 items-center">
-          <div className="relative">
-            <img src={IMAGES.dentist} alt="Our team" className="rounded-3xl shadow-brand" loading="lazy" />
+          <div className="relative max-w-md mx-auto lg:mx-0 w-full">
+            <img src={IMAGES.equipment} alt="Modern dental equipment and instruments" className="rounded-3xl shadow-brand w-full aspect-[4/3] object-cover bg-white" loading="lazy" />
             <div className="absolute -bottom-6 -right-4 sm:right-6 bg-white rounded-2xl p-4 shadow-card max-w-[14rem]">
               <div className="flex items-center gap-2">
                 <Stethoscope className="w-6 h-6 text-primary" />

@@ -191,7 +191,6 @@ export const SERVICES: Service[] = [
       { q: "How do I clean them?", a: "Brush gently and soak in cleaning solution." },
     ],
     gallery: [
-      { src: IMAGES.svcCleaning2, caption: "Lower arch cleaning prior to appliance fitting" },
       { src: IMAGES.svcRemovable1, caption: "Custom expansion appliance — lab and in-mouth view" },
       { src: IMAGES.svcRemovable2, caption: "Wire-and-acrylic removable appliance in place" },
     ],

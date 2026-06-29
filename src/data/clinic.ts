@@ -22,6 +22,16 @@ import clinic from "@/assets/clinic-interior.jpg";
 import dentist from "@/assets/dentist-portrait.jpg";
 import smile1 from "@/assets/smile-1.jpg";
 import smile2 from "@/assets/smile-2.jpg";
+import svcCleaning1 from "@/assets/svc-cleaning-1.png";
+import svcCleaning2 from "@/assets/svc-cleaning-2.png";
+import svcRemovable1 from "@/assets/svc-removable-1.png";
+import svcRemovable2 from "@/assets/svc-removable-2.png";
+import svcBracesCeramic from "@/assets/svc-braces-ceramic.png";
+import svcDentureFlexible from "@/assets/svc-denture-flexible.jpg";
+import svcDentureCobalt from "@/assets/svc-denture-cobalt.png";
+import svcDenturePartial from "@/assets/svc-denture-partial.png";
+import svcRetainerTypes from "@/assets/svc-retainer-types.png";
+import svcRetainerClear from "@/assets/svc-retainer-clear.png";
 
 void img1;
 
@@ -50,20 +60,30 @@ export const IMAGES = {
   dentist,
   smile1,
   smile2,
+  svcCleaning1,
+  svcCleaning2,
+  svcRemovable1,
+  svcRemovable2,
+  svcBracesCeramic,
+  svcDentureFlexible,
+  svcDentureCobalt,
+  svcDenturePartial,
+  svcRetainerTypes,
+  svcRetainerClear,
 };
 
 export const CLINIC = {
   name: "Lebanon Dental Care",
   tagline: "Your Smile, Our Priority",
-  whatsapp: "254715292743",
-  whatsappDisplay: "+254 715 292 743",
-  emergency: "254706194409",
-  emergencyDisplay: "+254 706 194 409",
+  whatsapp: "254706194409",
+  whatsappDisplay: "+254 706 194 409",
+  emergency: "254736123234",
+  emergencyDisplay: "+254 736 123 234",
   email: "info@lebanondentalcare.co.ke",
   hours: [
-    { day: "Monday - Friday", time: "8:00 AM - 7:00 PM" },
-    { day: "Saturday", time: "9:00 AM - 5:00 PM" },
-    { day: "Sunday", time: "Emergencies Only" },
+    { day: "Monday - Friday", time: "8:00 AM - 5:00 PM" },
+    { day: "Saturday", time: "9:00 AM - 4:00 PM" },
+    { day: "Sunday & Public Holidays", time: "Appointments & Emergencies Only" },
   ],
   address: "Lebanon Dental Care Clinic, Kenya",
   mapLink:
@@ -82,6 +102,7 @@ export type Service = {
   benefits: string[];
   process: { step: string; detail: string }[];
   faqs: { q: string; a: string }[];
+  gallery?: { src: string; caption: string }[];
 };
 
 export const SERVICES: Service[] = [

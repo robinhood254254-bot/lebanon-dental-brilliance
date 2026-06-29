@@ -328,6 +328,11 @@ export const SERVICES: Service[] = [
       { q: "Adjustment period?", a: "Typically 2–4 weeks to feel fully comfortable." },
       { q: "How to clean?", a: "Daily brushing and overnight soaking." },
     ],
+    gallery: [
+      { src: IMAGES.svcDentureFlexible, caption: "Flexible Dentures — lightweight, gum-coloured and metal-free for a discreet fit." },
+      { src: IMAGES.svcDentureCobalt, caption: "Cobalt Chromium Dentures — strong, slim metal framework that lasts for years." },
+      { src: IMAGES.svcDenturePartial, caption: "Removable Partial Dentures — replace a few missing teeth while preserving the rest." },
+    ],
   },
   {
     slug: "dental-retainers",
@@ -338,7 +343,7 @@ export const SERVICES: Service[] = [
     image: IMAGES.retainersGuide,
     benefits: ["Maintains alignment", "Custom fit", "Discreet", "Durable"],
     process: [
-      { step: "Scan", detail: "Digital impression." },
+      { step: "Scan", detail: "Impressions for working models." },
       { step: "Fabrication", detail: "Custom retainer made." },
       { step: "Fitting", detail: "Comfort check and adjustments." },
       { step: "Instructions", detail: "Care and wear guidance." },
@@ -346,6 +351,10 @@ export const SERVICES: Service[] = [
     faqs: [
       { q: "How long to wear?", a: "Full-time initially, then nights only." },
       { q: "How to clean?", a: "Brush gently and soak as advised." },
+    ],
+    gallery: [
+      { src: IMAGES.svcRetainerTypes, caption: "Types of retainers we offer — Hawley, clear plastic and fixed bonded." },
+      { src: IMAGES.svcRetainerClear, caption: "Custom clear transparent retainer — virtually invisible when worn." },
     ],
   },
   {

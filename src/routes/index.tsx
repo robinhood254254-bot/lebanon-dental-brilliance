@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Lebanon Dental Care | Professional Dental Care in Kenya" },
-      { name: "description", content: "Trusted by families for over 10 years with comprehensive dental treatments and modern dental solutions." },
+      { name: "description", content: "Trusted by families for over 7 years with comprehensive dental treatments and modern dental solutions." },
       { property: "og:title", content: "Lebanon Dental Care" },
       { property: "og:description", content: "Professional dental care for a healthier, brighter smile." },
       { property: "og:image", content: IMAGES.dentist },
@@ -97,7 +97,7 @@ function HomePage() {
               Professional Dental Care For A <span className="text-gradient-brand">Healthier, Brighter</span> Smile
             </h1>
             <p className="mt-5 text-base md:text-lg text-muted-foreground max-w-xl">
-              Trusted by families for over 10 years with comprehensive dental treatments and modern dental solutions.
+              Trusted by families for over 7 years with comprehensive dental treatments and modern dental solutions.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link to="/book" className="inline-flex items-center gap-2 bg-gradient-brand text-white px-6 py-3.5 rounded-full font-semibold shadow-brand hover:scale-[1.02] transition">
@@ -109,7 +109,7 @@ function HomePage() {
             </div>
             <div className="mt-8 grid grid-cols-3 gap-4 max-w-md">
               {[
-                { icon: Award, label: "10+ Yrs" },
+                { icon: Award, label: "7+ Yrs" },
                 { icon: Users, label: "1,000+ Patients" },
                 { icon: ShieldCheck, label: "Modern Care" },
               ].map((t) => (

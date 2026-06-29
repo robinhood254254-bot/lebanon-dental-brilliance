@@ -22,6 +22,16 @@ import clinic from "@/assets/clinic-interior.jpg";
 import dentist from "@/assets/dentist-portrait.jpg";
 import smile1 from "@/assets/smile-1.jpg";
 import smile2 from "@/assets/smile-2.jpg";
+import svcCleaning1 from "@/assets/svc-cleaning-1.png";
+import svcCleaning2 from "@/assets/svc-cleaning-2.png";
+import svcRemovable1 from "@/assets/svc-removable-1.png";
+import svcRemovable2 from "@/assets/svc-removable-2.png";
+import svcBracesCeramic from "@/assets/svc-braces-ceramic.png";
+import svcDentureFlexible from "@/assets/svc-denture-flexible.jpg";
+import svcDentureCobalt from "@/assets/svc-denture-cobalt.png";
+import svcDenturePartial from "@/assets/svc-denture-partial.png";
+import svcRetainerTypes from "@/assets/svc-retainer-types.png";
+import svcRetainerClear from "@/assets/svc-retainer-clear.png";
 
 void img1;
 
@@ -50,20 +60,30 @@ export const IMAGES = {
   dentist,
   smile1,
   smile2,
+  svcCleaning1,
+  svcCleaning2,
+  svcRemovable1,
+  svcRemovable2,
+  svcBracesCeramic,
+  svcDentureFlexible,
+  svcDentureCobalt,
+  svcDenturePartial,
+  svcRetainerTypes,
+  svcRetainerClear,
 };
 
 export const CLINIC = {
   name: "Lebanon Dental Care",
   tagline: "Your Smile, Our Priority",
-  whatsapp: "254715292743",
-  whatsappDisplay: "+254 715 292 743",
-  emergency: "254706194409",
-  emergencyDisplay: "+254 706 194 409",
+  whatsapp: "254706194409",
+  whatsappDisplay: "+254 706 194 409",
+  emergency: "254736123234",
+  emergencyDisplay: "+254 736 123 234",
   email: "info@lebanondentalcare.co.ke",
   hours: [
-    { day: "Monday - Friday", time: "8:00 AM - 7:00 PM" },
-    { day: "Saturday", time: "9:00 AM - 5:00 PM" },
-    { day: "Sunday", time: "Emergencies Only" },
+    { day: "Monday - Friday", time: "8:00 AM - 5:00 PM" },
+    { day: "Saturday", time: "9:00 AM - 4:00 PM" },
+    { day: "Sunday & Public Holidays", time: "Appointments & Emergencies Only" },
   ],
   address: "Lebanon Dental Care Clinic, Kenya",
   mapLink:
@@ -82,6 +102,7 @@ export type Service = {
   benefits: string[];
   process: { step: string; detail: string }[];
   faqs: { q: string; a: string }[];
+  gallery?: { src: string; caption: string }[];
 };
 
 export const SERVICES: Service[] = [
@@ -110,7 +131,7 @@ export const SERVICES: Service[] = [
     short: "Professional scaling and polishing for healthy gums.",
     description:
       "Routine professional cleaning removes plaque, tartar and surface stains keeping your gums healthy and your smile bright.",
-    image: IMAGES.whiteningBA,
+    image: IMAGES.svcCleaning1,
     benefits: ["Prevents gum disease", "Removes tartar", "Brightens smile", "Fresh breath"],
     process: [
       { step: "Examination", detail: "Quick oral health assessment." },
@@ -122,6 +143,10 @@ export const SERVICES: Service[] = [
       { q: "How often should I clean?", a: "Every 6 months for optimal oral health." },
       { q: "Will it hurt?", a: "Cleaning is comfortable for most patients." },
     ],
+    gallery: [
+      { src: IMAGES.svcCleaning1, caption: "Before & after — heavy tartar removal" },
+      { src: IMAGES.svcCleaning2, caption: "Lower arch scaling — stain & calculus removed" },
+    ],
   },
   {
     slug: "fixed-orthodontics",
@@ -132,14 +157,19 @@ export const SERVICES: Service[] = [
     image: IMAGES.bracesGirl,
     benefits: ["Permanent correction", "Improves bite", "Boosts confidence", "Affordable plans"],
     process: [
-      { step: "Assessment", detail: "Comprehensive orthodontic evaluation and X-rays." },
-      { step: "Fitting", detail: "Brackets and wires bonded to your teeth." },
-      { step: "Adjustments", detail: "Monthly tightening visits." },
-      { step: "Retention", detail: "Retainers to maintain results." },
+      { step: "Assessment & X-rays", detail: "Clinical examination with standard X-rays (no CBCT needed) to plan your treatment." },
+      { step: "Study Models", detail: "We take impressions to create study and working models for accurate planning." },
+      { step: "RCT Where Needed", detail: "Any required root canal treatment is done first to prevent the spread of infection during orthodontics." },
+      { step: "Surgical Extraction", detail: "Where space is needed, careful surgical extraction is done before fitting braces." },
+      { step: "Fitting", detail: "Brackets and wires bonded to your teeth — stainless steel or discreet ceramic." },
+      { step: "Adjustments & Retention", detail: "Monthly tightening visits, then retainers to maintain results." },
     ],
     faqs: [
       { q: "How long is treatment?", a: "Typically 12–24 months depending on case." },
       { q: "Are braces painful?", a: "Mild discomfort after adjustments, manageable easily." },
+    ],
+    gallery: [
+      { src: IMAGES.svcBracesCeramic, caption: "Ceramic & stainless steel braces — discreet, effective alignment" },
     ],
   },
   {
@@ -151,7 +181,7 @@ export const SERVICES: Service[] = [
     image: IMAGES.removableAppliances,
     benefits: ["Removable for eating", "Easy hygiene", "Comfortable", "Discreet"],
     process: [
-      { step: "Impressions", detail: "Digital scans of your teeth." },
+      { step: "Impressions", detail: "Impressions for study and working models." },
       { step: "Custom Build", detail: "Lab-fabricated appliance." },
       { step: "Fitting", detail: "Comfortable fitting session." },
       { step: "Review", detail: "Regular progress checks." },
@@ -159,6 +189,11 @@ export const SERVICES: Service[] = [
     faqs: [
       { q: "Can I eat with them?", a: "Remove during meals for best results." },
       { q: "How do I clean them?", a: "Brush gently and soak in cleaning solution." },
+    ],
+    gallery: [
+      { src: IMAGES.svcCleaning2, caption: "Lower arch cleaning prior to appliance fitting" },
+      { src: IMAGES.svcRemovable1, caption: "Custom expansion appliance — lab and in-mouth view" },
+      { src: IMAGES.svcRemovable2, caption: "Wire-and-acrylic removable appliance in place" },
     ],
   },
   {
@@ -293,6 +328,11 @@ export const SERVICES: Service[] = [
       { q: "Adjustment period?", a: "Typically 2–4 weeks to feel fully comfortable." },
       { q: "How to clean?", a: "Daily brushing and overnight soaking." },
     ],
+    gallery: [
+      { src: IMAGES.svcDentureFlexible, caption: "Flexible Dentures — lightweight, gum-coloured and metal-free for a discreet fit." },
+      { src: IMAGES.svcDentureCobalt, caption: "Cobalt Chromium Dentures — strong, slim metal framework that lasts for years." },
+      { src: IMAGES.svcDenturePartial, caption: "Removable Partial Dentures — replace a few missing teeth while preserving the rest." },
+    ],
   },
   {
     slug: "dental-retainers",
@@ -303,7 +343,7 @@ export const SERVICES: Service[] = [
     image: IMAGES.retainersGuide,
     benefits: ["Maintains alignment", "Custom fit", "Discreet", "Durable"],
     process: [
-      { step: "Scan", detail: "Digital impression." },
+      { step: "Scan", detail: "Impressions for working models." },
       { step: "Fabrication", detail: "Custom retainer made." },
       { step: "Fitting", detail: "Comfort check and adjustments." },
       { step: "Instructions", detail: "Care and wear guidance." },
@@ -311,6 +351,10 @@ export const SERVICES: Service[] = [
     faqs: [
       { q: "How long to wear?", a: "Full-time initially, then nights only." },
       { q: "How to clean?", a: "Brush gently and soak as advised." },
+    ],
+    gallery: [
+      { src: IMAGES.svcRetainerTypes, caption: "Types of retainers we offer — Hawley, clear plastic and fixed bonded." },
+      { src: IMAGES.svcRetainerClear, caption: "Custom clear transparent retainer — virtually invisible when worn." },
     ],
   },
   {

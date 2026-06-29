@@ -7,7 +7,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Us | Lebanon Dental Care" },
-      { name: "description", content: "Meet the Lebanon Dental Care team — 10+ years of experience and 1,000+ patients trusting us with their smiles." },
+      { name: "description", content: "Meet the Lebanon Dental Care team — 7+ years of experience and 1,000+ patients trusting us with their smiles." },
       { property: "og:title", content: "About Lebanon Dental Care" },
       { property: "og:description", content: "Our story, mission and team of trusted dental professionals." },
       { property: "og:image", content: IMAGES.dentist },
@@ -83,7 +83,7 @@ function AboutPage() {
       <section className="container-page pb-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-gradient-dark rounded-3xl p-8 text-white">
           {[
-            { icon: Award, v: "10+", l: "Years Experience" },
+            { icon: Award, v: "7+", l: "Years Experience" },
             { icon: Users, v: "1,000+", l: "Happy Patients" },
             { icon: Sparkles, v: "16+", l: "Services Offered" },
             { icon: Heart, v: "100%", l: "Patient Care" },

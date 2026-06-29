@@ -108,6 +108,29 @@ function ServiceDetailPage() {
         </div>
       </section>
 
+      {/* Gallery */}
+      {s.gallery && s.gallery.length > 0 && (
+        <section className="container-page py-14">
+          <div className="text-center max-w-2xl mx-auto">
+            <div className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">In The Clinic</div>
+            <h2 className="mt-2 text-2xl md:text-3xl font-display font-bold">{s.name} — Real Examples</h2>
+          </div>
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            {s.gallery.map((g) => (
+              <figure key={g.src} className="bg-card rounded-2xl overflow-hidden shadow-card border border-border">
+                <img src={g.src} alt={g.caption} loading="lazy" className="w-full aspect-[4/3] object-cover" />
+                <figcaption className="p-4 text-sm text-muted-foreground">{g.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link to="/book" className="inline-flex items-center gap-2 bg-gradient-brand text-white px-6 py-3 rounded-full font-semibold shadow-brand">
+              <Calendar className="w-5 h-5" /> Book This Service
+            </Link>
+          </div>
+        </section>
+      )}
+
 
       {/* FAQs */}
       <section className="bg-muted py-16">

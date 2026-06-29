@@ -107,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@type": "Dentist",
           name: "Lebanon Dental Care Clinic",
           description: "Modern dental clinic in Kenya providing braces, veneers, cleanings, root canals, extractions, children's dentistry and emergency dental care.",
-          telephone: "+254715292743",
+          telephone: "+254706194409",
           priceRange: "$$",
           address: { "@type": "PostalAddress", addressCountry: "KE", addressLocality: "Kenya" },
           openingHoursSpecification: [

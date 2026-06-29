@@ -131,7 +131,7 @@ export const SERVICES: Service[] = [
     short: "Professional scaling and polishing for healthy gums.",
     description:
       "Routine professional cleaning removes plaque, tartar and surface stains keeping your gums healthy and your smile bright.",
-    image: IMAGES.whiteningBA,
+    image: IMAGES.svcCleaning1,
     benefits: ["Prevents gum disease", "Removes tartar", "Brightens smile", "Fresh breath"],
     process: [
       { step: "Examination", detail: "Quick oral health assessment." },
@@ -143,6 +143,10 @@ export const SERVICES: Service[] = [
       { q: "How often should I clean?", a: "Every 6 months for optimal oral health." },
       { q: "Will it hurt?", a: "Cleaning is comfortable for most patients." },
     ],
+    gallery: [
+      { src: IMAGES.svcCleaning1, caption: "Before & after — heavy tartar removal" },
+      { src: IMAGES.svcCleaning2, caption: "Lower arch scaling — stain & calculus removed" },
+    ],
   },
   {
     slug: "fixed-orthodontics",
@@ -153,14 +157,19 @@ export const SERVICES: Service[] = [
     image: IMAGES.bracesGirl,
     benefits: ["Permanent correction", "Improves bite", "Boosts confidence", "Affordable plans"],
     process: [
-      { step: "Assessment", detail: "Comprehensive orthodontic evaluation and X-rays." },
-      { step: "Fitting", detail: "Brackets and wires bonded to your teeth." },
-      { step: "Adjustments", detail: "Monthly tightening visits." },
-      { step: "Retention", detail: "Retainers to maintain results." },
+      { step: "Assessment & X-rays", detail: "Clinical examination with standard X-rays (no CBCT needed) to plan your treatment." },
+      { step: "Study Models", detail: "We take impressions to create study and working models for accurate planning." },
+      { step: "RCT Where Needed", detail: "Any required root canal treatment is done first to prevent the spread of infection during orthodontics." },
+      { step: "Surgical Extraction", detail: "Where space is needed, careful surgical extraction is done before fitting braces." },
+      { step: "Fitting", detail: "Brackets and wires bonded to your teeth — stainless steel or discreet ceramic." },
+      { step: "Adjustments & Retention", detail: "Monthly tightening visits, then retainers to maintain results." },
     ],
     faqs: [
       { q: "How long is treatment?", a: "Typically 12–24 months depending on case." },
       { q: "Are braces painful?", a: "Mild discomfort after adjustments, manageable easily." },
+    ],
+    gallery: [
+      { src: IMAGES.svcBracesCeramic, caption: "Ceramic & stainless steel braces — discreet, effective alignment" },
     ],
   },
   {
@@ -172,7 +181,7 @@ export const SERVICES: Service[] = [
     image: IMAGES.removableAppliances,
     benefits: ["Removable for eating", "Easy hygiene", "Comfortable", "Discreet"],
     process: [
-      { step: "Impressions", detail: "Digital scans of your teeth." },
+      { step: "Impressions", detail: "Impressions for study and working models." },
       { step: "Custom Build", detail: "Lab-fabricated appliance." },
       { step: "Fitting", detail: "Comfortable fitting session." },
       { step: "Review", detail: "Regular progress checks." },
@@ -180,6 +189,11 @@ export const SERVICES: Service[] = [
     faqs: [
       { q: "Can I eat with them?", a: "Remove during meals for best results." },
       { q: "How do I clean them?", a: "Brush gently and soak in cleaning solution." },
+    ],
+    gallery: [
+      { src: IMAGES.svcCleaning2, caption: "Lower arch cleaning prior to appliance fitting" },
+      { src: IMAGES.svcRemovable1, caption: "Custom expansion appliance — lab and in-mouth view" },
+      { src: IMAGES.svcRemovable2, caption: "Wire-and-acrylic removable appliance in place" },
     ],
   },
   {

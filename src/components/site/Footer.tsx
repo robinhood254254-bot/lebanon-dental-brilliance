@@ -12,7 +12,7 @@ export function Footer() {
         <div>
           <img src={LOGO} alt="Lebanon Dental Care" className="h-16 md:h-20 w-auto bg-white rounded-2xl p-2 shadow-card" />
           <p className="text-sm text-white/90 leading-relaxed mt-5">
-            A modern dental clinic with 10+ years of experience delivering comprehensive, patient-centered dental care.
+            A modern dental clinic with 7+ years of experience delivering comprehensive, patient-centered dental care.
           </p>
           <p className="mt-4 text-sm font-semibold text-white/95">{CLINIC.tagline}</p>
         </div>

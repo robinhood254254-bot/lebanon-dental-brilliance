@@ -365,6 +365,36 @@ export const SERVICES: Service[] = [
     ],
   },
   {
+    slug: "oral-habits-management",
+    name: "Oral Habits Management",
+    short: "Habit breakers and night guards for thumb sucking and teeth grinding.",
+    description:
+      "Custom oral appliances that gently stop harmful habits — thumb and digit sucking in children, and teeth grinding (bruxism) in children and adults — protecting teeth, gums and jaw development.",
+    image: IMAGES.svcHabitBreaker,
+    benefits: [
+      "Stops thumb & digit sucking",
+      "Protects teeth from grinding",
+      "Prevents bite & jaw problems",
+      "Custom, comfortable fit",
+    ],
+    process: [
+      { step: "Assessment", detail: "Clinical examination to identify the habit and its effects on teeth, bite and jaw." },
+      { step: "Impressions", detail: "Impressions taken for study and working models to design a custom appliance." },
+      { step: "Custom Fabrication", detail: "Habit breaker or night guard fabricated in the lab to fit your mouth precisely." },
+      { step: "Fitting & Review", detail: "Comfortable fitting with clear wear instructions and regular review visits." },
+    ],
+    faqs: [
+      { q: "At what age should a child use a habit breaker?", a: "Usually from age 5–7 if the thumb or digit sucking habit has not stopped on its own." },
+      { q: "Is a night guard for grinding comfortable?", a: "Yes. It is custom-made to your bite so most patients adapt within a few nights." },
+    ],
+    gallery: [
+      { src: IMAGES.svcHabitBreaker, caption: "Thumb & Digit Sucking Habit Breaker — fixed appliance that gently discourages sucking." },
+      { src: IMAGES.svcThumbSucking, caption: "Effects of prolonged thumb sucking — open bite and protruded front teeth corrected with habit breakers." },
+      { src: IMAGES.svcMouthguardFit, caption: "Teeth Grinding Management — custom night guard being fitted to protect against bruxism." },
+      { src: IMAGES.svcMouthguardCase, caption: "Custom night guard in its protective case — worn at night to prevent grinding wear." },
+    ],
+  },
+  {
     slug: "childrens-dentistry",
     name: "Children's Dentistry",
     short: "Gentle dental care designed for kids.",

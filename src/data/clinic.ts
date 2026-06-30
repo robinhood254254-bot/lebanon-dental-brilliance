@@ -367,33 +367,60 @@ export const SERVICES: Service[] = [
   {
     slug: "oral-habits-management",
     name: "Oral Habits Management",
-    short: "Habit breakers and night guards for thumb sucking and teeth grinding.",
+    short: "Habit breakers for thumb and digit sucking.",
     description:
-      "Custom oral appliances that gently stop harmful habits — thumb and digit sucking in children, and teeth grinding (bruxism) in children and adults — protecting teeth, gums and jaw development.",
+      "Custom oral appliances that gently stop harmful habits like thumb and digit sucking in children — protecting developing teeth, bite alignment and jaw growth.",
     image: IMAGES.svcHabitBreaker,
     benefits: [
       "Stops thumb & digit sucking",
-      "Protects teeth from grinding",
-      "Prevents bite & jaw problems",
+      "Protects developing bite",
+      "Prevents open bite & protrusion",
       "Custom, comfortable fit",
     ],
     process: [
       { step: "Assessment", detail: "Clinical examination to identify the habit and its effects on teeth, bite and jaw." },
       { step: "Impressions", detail: "Impressions taken for study and working models to design a custom appliance." },
-      { step: "Custom Fabrication", detail: "Habit breaker or night guard fabricated in the lab to fit your mouth precisely." },
+      { step: "Custom Fabrication", detail: "Habit breaker fabricated in the lab to fit your child's mouth precisely." },
       { step: "Fitting & Review", detail: "Comfortable fitting with clear wear instructions and regular review visits." },
     ],
     faqs: [
       { q: "At what age should a child use a habit breaker?", a: "Usually from age 5–7 if the thumb or digit sucking habit has not stopped on its own." },
-      { q: "Is a night guard for grinding comfortable?", a: "Yes. It is custom-made to your bite so most patients adapt within a few nights." },
+      { q: "How long is the appliance worn?", a: "Typically 6–12 months depending on how quickly the habit stops and the bite improves." },
     ],
     gallery: [
       { src: IMAGES.svcHabitBreaker, caption: "Thumb & Digit Sucking Habit Breaker — fixed appliance that gently discourages sucking." },
       { src: IMAGES.svcThumbSucking, caption: "Effects of prolonged thumb sucking — open bite and protruded front teeth corrected with habit breakers." },
-      { src: IMAGES.svcMouthguardFit, caption: "Teeth Grinding Management — custom night guard being fitted to protect against bruxism." },
+    ],
+  },
+  {
+    slug: "teeth-grinding-management",
+    name: "Teeth Grinding Management",
+    short: "Custom night guards for bruxism and teeth grinding.",
+    description:
+      "Custom-made night guards that protect your teeth from the wear, fractures and jaw pain caused by bruxism (teeth grinding) and clenching — for both children and adults.",
+    image: IMAGES.svcMouthguardFit,
+    benefits: [
+      "Protects teeth from grinding wear",
+      "Relieves jaw & muscle pain",
+      "Prevents tooth fractures",
+      "Custom-fit for comfort",
+    ],
+    process: [
+      { step: "Assessment", detail: "Clinical examination to confirm bruxism and check for tooth wear, sensitivity and jaw symptoms." },
+      { step: "Impressions", detail: "Accurate impressions taken for study and working models of your bite." },
+      { step: "Custom Fabrication", detail: "Night guard fabricated in the lab from durable material to fit your bite precisely." },
+      { step: "Fitting & Review", detail: "Comfortable fitting with wear and care instructions, plus follow-up reviews." },
+    ],
+    faqs: [
+      { q: "Is a night guard comfortable to sleep in?", a: "Yes. It is custom-made to your bite so most patients adapt within a few nights." },
+      { q: "How do I care for my night guard?", a: "Rinse after each use, brush gently with a soft brush, and store dry in its protective case." },
+    ],
+    gallery: [
+      { src: IMAGES.svcMouthguardFit, caption: "Custom night guard being fitted to protect against bruxism and grinding wear." },
       { src: IMAGES.svcMouthguardCase, caption: "Custom night guard in its protective case — worn at night to prevent grinding wear." },
     ],
   },
+
   {
     slug: "childrens-dentistry",
     name: "Children's Dentistry",

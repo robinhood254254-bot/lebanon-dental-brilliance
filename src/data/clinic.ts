@@ -32,6 +32,10 @@ import svcDentureCobalt from "@/assets/svc-denture-cobalt.png";
 import svcDenturePartial from "@/assets/svc-denture-partial.png";
 import svcRetainerTypes from "@/assets/svc-retainer-types.png";
 import svcRetainerClear from "@/assets/svc-retainer-clear.png";
+import svcHabitBreaker from "@/assets/svc-habit-breaker.png";
+import svcThumbSucking from "@/assets/svc-thumb-sucking.png";
+import svcMouthguardFit from "@/assets/svc-mouthguard-fit.png";
+import svcMouthguardCase from "@/assets/svc-mouthguard-case.png";
 
 void img1;
 
@@ -70,6 +74,10 @@ export const IMAGES = {
   svcDenturePartial,
   svcRetainerTypes,
   svcRetainerClear,
+  svcHabitBreaker,
+  svcThumbSucking,
+  svcMouthguardFit,
+  svcMouthguardCase,
 };
 
 export const CLINIC = {

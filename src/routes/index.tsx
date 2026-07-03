@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const slides = [IMAGES.dentist, IMAGES.childCheckup, IMAGES.clinic, IMAGES.veneersBA, IMAGES.boyDentist];
+const slides = [IMAGES.teamGroup, IMAGES.childCheckup, IMAGES.drAlone, IMAGES.treatingPatient1, IMAGES.treatingPatient2];
 
 function Slider() {
   const [i, setI] = useState(0);

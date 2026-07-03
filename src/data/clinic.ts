@@ -530,7 +530,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "benefits-of-teeth-cleaning",
     title: "Benefits of Teeth Cleaning",
     excerpt: "Why a 6-month professional cleaning is essential for healthy gums and a brighter smile.",
-    image: IMAGES.whiteningBA,
+    image: IMAGES.treatingPatient1,
     date: "May 10, 2026",
     read: "4 min",
     content: [
@@ -569,7 +569,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "dental-hygiene-tips",
     title: "Daily Dental Hygiene Tips",
     excerpt: "Simple habits to keep your smile healthy, white and cavity-free at home.",
-    image: IMAGES.smile1,
+    image: IMAGES.treatingPatient2,
     date: "Apr 05, 2026",
     read: "3 min",
     content: [

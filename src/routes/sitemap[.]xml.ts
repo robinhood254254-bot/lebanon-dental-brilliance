@@ -2,8 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 import { SERVICES, BLOG_POSTS } from "@/data/clinic";
 
-// TODO: replace with the production URL once a custom domain is set.
-const BASE_URL = "";
+const BASE_URL = "https://smile-bright-leb.lovable.app";
 
 interface SitemapEntry {
   path: string;

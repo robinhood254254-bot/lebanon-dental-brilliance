@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const slides = [IMAGES.dentist, IMAGES.childCheckup, IMAGES.clinic, IMAGES.veneersBA, IMAGES.boyDentist];
+const slides = [IMAGES.teamGroup, IMAGES.childCheckup, IMAGES.drAlone, IMAGES.treatingPatient1, IMAGES.treatingPatient2];
 
 function Slider() {
   const [i, setI] = useState(0);
@@ -45,7 +45,7 @@ function Slider() {
           />
         ))}
       </div>
-      <div className="absolute top-4 right-4 bg-white/95 backdrop-blur rounded-2xl px-4 py-3 shadow-card">
+      <div className="absolute bottom-16 right-4 bg-white/95 backdrop-blur rounded-2xl px-4 py-3 shadow-card">
         <div className="flex items-center gap-2">
           <div className="flex -space-x-2">
             <img src={IMAGES.smile1} className="w-7 h-7 rounded-full border-2 border-white object-cover" alt="" />

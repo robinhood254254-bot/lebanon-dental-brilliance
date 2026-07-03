@@ -19,7 +19,7 @@ import img19 from "@/assets/image-19.png";
 import logo from "@/assets/logo.png";
 import forceps from "@/assets/forceps.png";
 import clinic from "@/assets/clinic-interior.jpg";
-import dentist from "@/assets/dentist-portrait.jpg";
+// dentist portrait replaced by Dr. Rajab (upload-36)
 import smile1 from "@/assets/smile-1.jpg";
 import smile2 from "@/assets/smile-2.jpg";
 import svcCleaning1 from "@/assets/svc-cleaning-1.png";
@@ -36,6 +36,14 @@ import svcHabitBreaker from "@/assets/svc-habit-breaker.png";
 import svcThumbSucking from "@/assets/svc-thumb-sucking.png";
 import svcMouthguardFit from "@/assets/svc-mouthguard-fit.png";
 import svcMouthguardCase from "@/assets/svc-mouthguard-case.png";
+import teethMasking from "@/assets/upload-34.png";
+import smileMakeover from "@/assets/upload-35.png";
+import drRajab from "@/assets/upload-36.png";
+import drRajab2 from "@/assets/upload-37.png";
+import teamGroup from "@/assets/upload-38.png";
+import drAlone from "@/assets/upload-39.png";
+import treatingPatient1 from "@/assets/upload-40.png";
+import treatingPatient2 from "@/assets/upload-41.png";
 
 void img1;
 
@@ -61,7 +69,15 @@ export const IMAGES = {
   gumDisease: img18,
   equipment: forceps,
   clinic,
-  dentist,
+  dentist: drRajab,
+  drRajab,
+  drRajab2,
+  teamGroup,
+  drAlone,
+  treatingPatient1,
+  treatingPatient2,
+  teethMasking,
+  smileMakeover,
   smile1,
   smile2,
   svcCleaning1,
@@ -87,7 +103,7 @@ export const CLINIC = {
   whatsappDisplay: "+254 706 194 409",
   emergency: "254736123234",
   emergencyDisplay: "+254 736 123 234",
-  email: "info@lebanondentalcare.co.ke",
+  email: "info@lebanondentals.com",
   hours: [
     { day: "Monday - Friday", time: "8:00 AM - 5:00 PM" },
     { day: "Saturday", time: "9:00 AM - 4:00 PM" },
@@ -120,7 +136,7 @@ export const SERVICES: Service[] = [
     short: "Cosmetic masking for stained or discoloured teeth.",
     description:
       "Restore your smile's natural appearance with our advanced teeth masking treatment that conceals discolouration, stains and minor imperfections.",
-    image: IMAGES.veneersBA,
+    image: IMAGES.teethMasking,
     benefits: ["Natural look", "Same-day results", "Non-invasive", "Long-lasting"],
     process: [
       { step: "Consultation", detail: "We assess your teeth and discuss desired outcomes." },
@@ -484,7 +500,7 @@ export const SERVICES: Service[] = [
     short: "Total transformation of your smile.",
     description:
       "A combination of cosmetic treatments tailored to give you the smile of your dreams.",
-    image: IMAGES.veneersBA,
+    image: IMAGES.smileMakeover,
     benefits: ["Complete transformation", "Custom plan", "Boosts confidence", "Long-lasting"],
     process: [
       { step: "Consultation", detail: "Goals and smile analysis." },
@@ -514,7 +530,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "benefits-of-teeth-cleaning",
     title: "Benefits of Teeth Cleaning",
     excerpt: "Why a 6-month professional cleaning is essential for healthy gums and a brighter smile.",
-    image: IMAGES.whiteningBA,
+    image: IMAGES.treatingPatient1,
     date: "May 10, 2026",
     read: "4 min",
     content: [
@@ -553,7 +569,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "dental-hygiene-tips",
     title: "Daily Dental Hygiene Tips",
     excerpt: "Simple habits to keep your smile healthy, white and cavity-free at home.",
-    image: IMAGES.smile1,
+    image: IMAGES.treatingPatient2,
     date: "Apr 05, 2026",
     read: "3 min",
     content: [

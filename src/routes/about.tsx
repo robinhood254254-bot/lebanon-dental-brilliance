@@ -62,9 +62,9 @@ function AboutPage() {
         </div>
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-            { name: "Lead Dentist", role: "Coming Soon", image: IMAGES.dentist },
-            { name: "Clinical Team", role: "Coming Soon", image: IMAGES.clinic },
-            { name: "Pediatric Care", role: "Coming Soon", image: IMAGES.childCheckup },
+            { name: "Dr. Rajab Chaka", role: "Lead Dentist", image: IMAGES.drRajab },
+            { name: "Clinical Team", role: "Dental Professionals", image: IMAGES.teamGroup },
+            { name: "In The Chair", role: "Patient Care", image: IMAGES.drRajab2 },
           ].map((m) => (
             <div key={m.name} className="bg-card rounded-2xl overflow-hidden border border-border shadow-card group">
               <div className="aspect-[4/5] overflow-hidden">
@@ -104,7 +104,7 @@ function AboutPage() {
           <h2 className="mt-2 text-3xl md:text-4xl font-display font-bold">Modern Facilities & Equipment</h2>
         </div>
         <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3">
-          {[IMAGES.clinic, IMAGES.whiteningProcess, IMAGES.childCheckup, IMAGES.dentist, IMAGES.boyDentist, IMAGES.veneersBA, IMAGES.whiteningBA, IMAGES.dentures].map((img, i) => (
+          {[IMAGES.clinic, IMAGES.treatingPatient1, IMAGES.childCheckup, IMAGES.drRajab, IMAGES.treatingPatient2, IMAGES.drAlone, IMAGES.teamGroup, IMAGES.drRajab2].map((img, i) => (
             <img key={i} src={img} alt="" loading="lazy" className="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform duration-500" />
           ))}
         </div>

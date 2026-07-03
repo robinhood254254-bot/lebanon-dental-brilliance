@@ -9,37 +9,60 @@ export const Route = createFileRoute("/blog/$slug")({
     if (!post) throw notFound();
     return post;
   },
-  head: ({ loaderData, params }) => ({
-    meta: loaderData
-      ? [
-          { title: `${loaderData.title} | Lebanon Dental Care Blog` },
-          { name: "description", content: loaderData.excerpt },
-          { property: "og:title", content: loaderData.title },
-          { property: "og:description", content: loaderData.excerpt },
-          { property: "og:image", content: loaderData.image },
-          { property: "og:type", content: "article" },
-          { property: "og:url", content: `/blog/${params.slug}` },
-        ]
-      : [],
-    links: loaderData ? [{ rel: "canonical", href: `/blog/${params.slug}` }] : [],
-    scripts: loaderData
-      ? [
-          {
-            type: "application/ld+json",
-            children: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Article",
-              headline: loaderData.title,
-              description: loaderData.excerpt,
-              image: loaderData.image,
-              datePublished: loaderData.date,
-              author: { "@type": "Organization", name: "Lebanon Dental Care" },
-              publisher: { "@type": "Organization", name: "Lebanon Dental Care" },
-            }),
-          },
-        ]
-      : [],
-  }),
+  head: ({ loaderData, params }) => {
+    const url = `https://smile-bright-leb.lovable.app/blog/${params.slug}`;
+    if (!loaderData) return { meta: [{ title: "Article not found" }, { name: "robots", content: "noindex" }] };
+    const p = loaderData;
+    return {
+      meta: [
+        { title: `${p.title} | Lebanon Dental Care Blog` },
+        { name: "description", content: p.excerpt },
+        { name: "keywords", content: `${p.title}, dental blog Kenya, dentist Mombasa, Lebanon Dental Care` },
+        { property: "og:title", content: p.title },
+        { property: "og:description", content: p.excerpt },
+        { property: "og:image", content: p.image },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "article" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: p.title },
+        { name: "twitter:description", content: p.excerpt },
+        { name: "twitter:image", content: p.image },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: p.title,
+            description: p.excerpt,
+            image: p.image,
+            datePublished: p.date,
+            author: { "@type": "Organization", name: "Lebanon Dental Care" },
+            publisher: {
+              "@type": "Organization",
+              name: "Lebanon Dental Care",
+              logo: { "@type": "ImageObject", url: "https://smile-bright-leb.lovable.app/logo.png" },
+            },
+            mainEntityOfPage: url,
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://smile-bright-leb.lovable.app/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://smile-bright-leb.lovable.app/blog" },
+              { "@type": "ListItem", position: 3, name: p.title, item: url },
+            ],
+          }),
+        },
+      ],
+    };
+  },
   notFoundComponent: () => (
     <SiteLayout>
       <div className="container-page py-24 text-center">

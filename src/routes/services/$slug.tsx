@@ -9,17 +9,91 @@ export const Route = createFileRoute("/services/$slug")({
     if (!service) throw notFound();
     return service;
   },
-  head: ({ loaderData }) => ({
-    meta: loaderData
-      ? [
-          { title: `${loaderData.name} | Lebanon Dental Care` },
-          { name: "description", content: loaderData.description },
-          { property: "og:title", content: `${loaderData.name} | Lebanon Dental Care` },
-          { property: "og:description", content: loaderData.description },
-          { property: "og:image", content: loaderData.image },
-        ]
-      : [],
-  }),
+  head: ({ loaderData, params }) => {
+    const url = `https://smile-bright-leb.lovable.app/services/${params.slug}`;
+    if (!loaderData) return { meta: [{ title: "Service not found" }, { name: "robots", content: "noindex" }] };
+    const s = loaderData;
+    const title = `${s.name} in Mombasa & Kenya | Lebanon Dental Care`;
+    const desc = `${s.description} Trusted ${s.name.toLowerCase()} at Lebanon Dental Care Clinic serving Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi.`;
+    return {
+      meta: [
+        { title },
+        { name: "description", content: desc },
+        { name: "keywords", content: `${s.name}, ${s.name} Mombasa, ${s.name} Kenya, dentist Mombasa, dental clinic Kenya, Lebanon Dental Care` },
+        { property: "og:title", content: title },
+        { property: "og:description", content: desc },
+        { property: "og:image", content: s.image },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "article" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: desc },
+        { name: "twitter:image", content: s.image },
+      ],
+      links: [{ rel: "canonical", href: url }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MedicalProcedure",
+            name: s.name,
+            description: s.description,
+            image: s.image,
+            url,
+            howPerformed: s.process.map((p) => `${p.step}: ${p.detail}`).join(" | "),
+            benefits: s.benefits.join(", "),
+            provider: { "@id": "https://smile-bright-leb.lovable.app/#clinic" },
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: s.name,
+            name: s.name,
+            description: s.description,
+            areaServed: [
+              { "@type": "City", name: "Mombasa" },
+              { "@type": "City", name: "Nyali" },
+              { "@type": "City", name: "Bamburi" },
+              { "@type": "City", name: "Shanzu" },
+              { "@type": "City", name: "Mtwapa" },
+              { "@type": "City", name: "Kilifi" },
+              { "@type": "Country", name: "Kenya" },
+            ],
+            provider: { "@id": "https://smile-bright-leb.lovable.app/#clinic" },
+            url,
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: s.faqs.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          }),
+        },
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://smile-bright-leb.lovable.app/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://smile-bright-leb.lovable.app/services" },
+              { "@type": "ListItem", position: 3, name: s.name, item: url },
+            ],
+          }),
+        },
+      ],
+    };
+  },
   notFoundComponent: () => (
     <SiteLayout>
       <div className="container-page py-24 text-center">

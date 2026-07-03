@@ -7,12 +7,15 @@ import { CLINIC, IMAGES, SERVICES, TESTIMONIALS, buildWhatsAppUrl } from "@/data
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lebanon Dental Care | Professional Dental Care in Kenya" },
-      { name: "description", content: "Trusted by families for over 7 years with comprehensive dental treatments and modern dental solutions." },
-      { property: "og:title", content: "Lebanon Dental Care" },
-      { property: "og:description", content: "Professional dental care for a healthier, brighter smile." },
+      { title: "Lebanon Dental Care Clinic | Best Dentist in Mombasa & Kenya" },
+      { name: "description", content: "Trusted dental clinic in Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi. Braces, veneers, teeth whitening, implants, root canals, children's dentistry and 24/7 emergency dental care." },
+      { name: "keywords", content: "best dentist in Mombasa, dental clinic Mombasa, dentist Nyali, dentist Bamburi, dentist Shanzu, dentist Mtwapa, dentist Kilifi, emergency dentist Kenya, cosmetic dentist Kenya, pediatric dentist Mombasa, dental implants Kenya, teeth whitening Mombasa, braces Kenya, Lebanon Dental Care" },
+      { property: "og:title", content: "Lebanon Dental Care Clinic | Best Dentist in Mombasa & Kenya" },
+      { property: "og:description", content: "Professional dental care in Mombasa and across Kenya — 7+ years of trusted, patient-first dentistry." },
       { property: "og:image", content: IMAGES.dentist },
+      { property: "og:url", content: "https://smile-bright-leb.lovable.app/" },
     ],
+    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/" }],
   }),
   component: HomePage,
 });

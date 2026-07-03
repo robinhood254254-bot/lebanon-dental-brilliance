@@ -6,12 +6,15 @@ import { IMAGES } from "@/data/clinic";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us | Lebanon Dental Care" },
-      { name: "description", content: "Meet the Lebanon Dental Care team — 7+ years of experience and 1,000+ patients trusting us with their smiles." },
-      { property: "og:title", content: "About Lebanon Dental Care" },
-      { property: "og:description", content: "Our story, mission and team of trusted dental professionals." },
+      { title: "About Us | Lebanon Dental Care Clinic Mombasa, Kenya" },
+      { name: "description", content: "Meet the Lebanon Dental Care team — 7 years of trusted, patient-centered dental care serving Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi." },
+      { name: "keywords", content: "about Lebanon Dental Care, dentist Mombasa, dental team Kenya, trusted dental clinic Mombasa" },
+      { property: "og:title", content: "About Lebanon Dental Care Clinic" },
+      { property: "og:description", content: "Our story, mission and team of trusted dental professionals in Mombasa, Kenya." },
       { property: "og:image", content: IMAGES.dentist },
+      { property: "og:url", content: "https://smile-bright-leb.lovable.app/about" },
     ],
+    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/about" }],
   }),
   component: AboutPage,
 });

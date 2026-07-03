@@ -36,6 +36,14 @@ import svcHabitBreaker from "@/assets/svc-habit-breaker.png";
 import svcThumbSucking from "@/assets/svc-thumb-sucking.png";
 import svcMouthguardFit from "@/assets/svc-mouthguard-fit.png";
 import svcMouthguardCase from "@/assets/svc-mouthguard-case.png";
+import teethMasking from "@/assets/upload-34.png";
+import smileMakeover from "@/assets/upload-35.png";
+import drRajab from "@/assets/upload-36.png";
+import drRajab2 from "@/assets/upload-37.png";
+import teamGroup from "@/assets/upload-38.png";
+import drAlone from "@/assets/upload-39.png";
+import treatingPatient1 from "@/assets/upload-40.png";
+import treatingPatient2 from "@/assets/upload-41.png";
 
 void img1;
 

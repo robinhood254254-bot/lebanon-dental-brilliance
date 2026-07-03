@@ -136,7 +136,7 @@ export const SERVICES: Service[] = [
     short: "Cosmetic masking for stained or discoloured teeth.",
     description:
       "Restore your smile's natural appearance with our advanced teeth masking treatment that conceals discolouration, stains and minor imperfections.",
-    image: IMAGES.veneersBA,
+    image: IMAGES.teethMasking,
     benefits: ["Natural look", "Same-day results", "Non-invasive", "Long-lasting"],
     process: [
       { step: "Consultation", detail: "We assess your teeth and discuss desired outcomes." },
@@ -500,7 +500,7 @@ export const SERVICES: Service[] = [
     short: "Total transformation of your smile.",
     description:
       "A combination of cosmetic treatments tailored to give you the smile of your dreams.",
-    image: IMAGES.veneersBA,
+    image: IMAGES.smileMakeover,
     benefits: ["Complete transformation", "Custom plan", "Boosts confidence", "Long-lasting"],
     process: [
       { step: "Consultation", detail: "Goals and smile analysis." },

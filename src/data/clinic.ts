@@ -19,7 +19,7 @@ import img19 from "@/assets/image-19.png";
 import logo from "@/assets/logo.png";
 import forceps from "@/assets/forceps.png";
 import clinic from "@/assets/clinic-interior.jpg";
-import dentist from "@/assets/dentist-portrait.jpg";
+// dentist portrait replaced by Dr. Rajab (upload-36)
 import smile1 from "@/assets/smile-1.jpg";
 import smile2 from "@/assets/smile-2.jpg";
 import svcCleaning1 from "@/assets/svc-cleaning-1.png";

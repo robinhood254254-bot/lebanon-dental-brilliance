@@ -103,7 +103,7 @@ export const CLINIC = {
   whatsappDisplay: "+254 706 194 409",
   emergency: "254736123234",
   emergencyDisplay: "+254 736 123 234",
-  email: "info@lebanondentalcare.co.ke",
+  email: "info@lebanondentals.com",
   hours: [
     { day: "Monday - Friday", time: "8:00 AM - 5:00 PM" },
     { day: "Saturday", time: "9:00 AM - 4:00 PM" },

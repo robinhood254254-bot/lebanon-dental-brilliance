@@ -7,11 +7,14 @@ import { CLINIC, SERVICES, buildWhatsAppUrl } from "@/data/clinic";
 export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
-      { title: "Book Appointment | Lebanon Dental Care" },
-      { name: "description", content: "Book your dental appointment online — instant confirmation via WhatsApp." },
+      { title: "Book a Dental Appointment | Lebanon Dental Care Mombasa" },
+      { name: "description", content: "Book your dental appointment in Mombasa online — instant confirmation via WhatsApp. Serving Nyali, Bamburi, Shanzu, Mtwapa and Kilifi." },
+      { name: "keywords", content: "book dentist Mombasa, dental appointment Kenya, schedule dentist Nyali, WhatsApp dental booking" },
       { property: "og:title", content: "Book Appointment | Lebanon Dental Care" },
-      { property: "og:description", content: "Easy online booking with instant WhatsApp confirmation." },
+      { property: "og:description", content: "Easy online dental booking with instant WhatsApp confirmation." },
+      { property: "og:url", content: "https://smile-bright-leb.lovable.app/book" },
     ],
+    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/book" }],
   }),
   component: BookPage,
 });

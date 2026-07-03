@@ -6,12 +6,15 @@ import { SERVICES } from "@/data/clinic";
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Our Dental Services | Lebanon Dental Care" },
-      { name: "description", content: "Explore our complete range of dental services — from teeth cleaning and braces to veneers, root canals, dentures and emergency care." },
-      { property: "og:title", content: "Dental Services in Kenya | Lebanon Dental Care" },
-      { property: "og:description", content: "Comprehensive dental services with modern equipment and a patient-first approach." },
+      { title: "Dental Services in Mombasa & Kenya | Lebanon Dental Care" },
+      { name: "description", content: "Comprehensive dental services in Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi — braces, veneers, whitening, implants, root canals, extractions, children's dentistry and emergency care." },
+      { name: "keywords", content: "dental services Mombasa, dental clinic Kenya, braces, veneers, teeth whitening, dental implants, root canal, tooth extraction, children dentist, emergency dentist" },
+      { property: "og:title", content: "Dental Services in Mombasa & Kenya | Lebanon Dental Care" },
+      { property: "og:description", content: "Explore our complete range of dental services with modern equipment and a patient-first approach." },
       { property: "og:image", content: SERVICES[0].image },
+      { property: "og:url", content: "https://smile-bright-leb.lovable.app/services" },
     ],
+    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/services" }],
   }),
   component: ServicesPage,
 });

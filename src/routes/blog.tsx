@@ -6,12 +6,15 @@ import { BLOG_POSTS } from "@/data/clinic";
 export const Route = createFileRoute("/blog")({
   head: () => ({
     meta: [
-      { title: "Dental Blog | Lebanon Dental Care" },
-      { name: "description", content: "Expert dental tips, treatment guides and oral health advice from Lebanon Dental Care." },
+      { title: "Dental Blog | Oral Health Tips from Lebanon Dental Care Mombasa" },
+      { name: "description", content: "Expert dental tips, treatment guides and oral health advice from Lebanon Dental Care — serving Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi." },
+      { name: "keywords", content: "dental blog Kenya, oral health tips, dental care Mombasa, teeth whitening guide, braces, root canal, Lebanon Dental Care" },
       { property: "og:title", content: "Dental Blog | Lebanon Dental Care" },
       { property: "og:description", content: "Expert dental tips and oral health advice." },
       { property: "og:image", content: BLOG_POSTS[0].image },
+      { property: "og:url", content: "https://smile-bright-leb.lovable.app/blog" },
     ],
+    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/blog" }],
   }),
   component: BlogPage,
 });

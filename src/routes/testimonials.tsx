@@ -6,12 +6,15 @@ import { IMAGES, TESTIMONIALS } from "@/data/clinic";
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
-      { title: "Patient Testimonials | Lebanon Dental Care" },
-      { name: "description", content: "Hear from our 1,000+ happy patients about their experience at Lebanon Dental Care." },
-      { property: "og:title", content: "Patient Testimonials" },
-      { property: "og:description", content: "Real stories from real patients." },
+      { title: "Patient Testimonials | Lebanon Dental Care Mombasa, Kenya" },
+      { name: "description", content: "Real reviews from 1,000+ happy patients at Lebanon Dental Care Clinic in Mombasa, Kenya." },
+      { name: "keywords", content: "dentist reviews Mombasa, Lebanon Dental Care testimonials, best dentist Kenya reviews" },
+      { property: "og:title", content: "Patient Testimonials | Lebanon Dental Care" },
+      { property: "og:description", content: "Real stories from real dental patients in Mombasa, Kenya." },
       { property: "og:image", content: IMAGES.smile1 },
+      { property: "og:url", content: "https://smile-bright-leb.lovable.app/testimonials" },
     ],
+    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/testimonials" }],
   }),
   component: TestimonialsPage,
 });

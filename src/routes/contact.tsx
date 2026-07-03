@@ -6,11 +6,14 @@ import { CLINIC, buildWhatsAppUrl } from "@/data/clinic";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Us | Lebanon Dental Care" },
-      { name: "description", content: "Reach Lebanon Dental Care via WhatsApp, phone or email. Find our clinic location and business hours." },
-      { property: "og:title", content: "Contact Lebanon Dental Care" },
-      { property: "og:description", content: "Get in touch with our dental team." },
+      { title: "Contact Lebanon Dental Care | Dentist in Mombasa, Kenya" },
+      { name: "description", content: "Contact Lebanon Dental Care Clinic in Mombasa. Book via WhatsApp +254 706 194 409, call our emergency line, or email info@lebanondentals.com." },
+      { name: "keywords", content: "contact dentist Mombasa, book dental appointment Kenya, emergency dentist Mombasa, Lebanon Dental Care contact" },
+      { property: "og:title", content: "Contact Lebanon Dental Care Clinic" },
+      { property: "og:description", content: "Get in touch with our dental team in Mombasa, Kenya." },
+      { property: "og:url", content: "https://smile-bright-leb.lovable.app/contact" },
     ],
+    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/contact" }],
   }),
   component: ContactPage,
 });

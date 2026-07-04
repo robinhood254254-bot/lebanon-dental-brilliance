@@ -523,20 +523,203 @@ export type BlogPost = {
   date: string;
   read: string;
   content: string[];
+  seoTitle?: string;
+  seoDescription?: string;
+  keywords?: string;
+  serviceSlug?: string;
+  ctaServiceName?: string;
+  faqs?: { q: string; a: string }[];
+  internalLinks?: (
+    | { kind: "service"; label: string; slug: string }
+    | { kind: "blog"; label: string; slug: string }
+    | { kind: "route"; label: string; to: "/" | "/about" | "/services" | "/blog" | "/book" | "/contact" | "/testimonials" }
+  )[];
 };
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "best-dentist-in-mombasa",
+    title: "Best Dentist in Mombasa: How to Choose the Right Dental Clinic for Your Family",
+    excerpt: "A practical guide for patients searching for a trusted dentist in Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi.",
+    image: IMAGES.teamGroup,
+    date: "Jun 18, 2026",
+    read: "7 min",
+    seoTitle: "Best Dentist in Mombasa | Lebanon Dental Care Clinic",
+    seoDescription: "Looking for the best dentist in Mombasa? Learn what to check before booking dental care in Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi.",
+    keywords: "best dentist in Mombasa, dental clinic Mombasa, dental hospitals in Mombasa, dentist Nyali, dentist Bamburi, Lebanon Dental Care, Lebanon Dentals",
+    ctaServiceName: "Dental Consultation",
+    serviceSlug: "teeth-cleaning",
+    content: [
+      "When people search for the best dentist in Mombasa, they are usually looking for more than a nearby clinic. They want a dental team that listens, explains treatment clearly, uses modern equipment and delivers results that feel comfortable, natural and long-lasting. Lebanon Dental Care serves patients from Mombasa, Nyali, Bamburi, Shanzu, Mtwapa, Kilifi and surrounding communities with a practical focus on prevention, urgent pain relief and confident smile restoration.",
+      "A good dental clinic should make diagnosis simple to understand. Before treatment begins, the dentist should examine your mouth, explain what is causing the problem, show the available options and help you choose the right plan for your budget and long-term health. This matters whether you need a routine cleaning, braces, a filling, root canal treatment, tooth extraction, dentures, veneers or emergency dental care.",
+      "Results are what patients care about most. The right dental treatment should reduce pain, improve chewing, freshen breath, protect the gums, restore broken or missing teeth and give you the confidence to smile in photos and conversations. Regular checkups and professional cleanings also prevent small issues from becoming bigger problems that cost more to fix later.",
+      "For families, convenience and trust are important. Children need gentle care that builds confidence from an early age, while adults often need flexible appointments, clear aftercare and fast help during emergencies. Lebanon Dental Care keeps appointment booking simple through WhatsApp and provides an emergency line for urgent dental pain, swelling, trauma or broken teeth.",
+      "If you are comparing dental hospitals in Mombasa or searching for Lebanon Dentals online, the safest next step is to book a consultation. A dentist can assess your exact concern, recommend the most suitable treatment and give you a clear path toward a healthier, brighter smile.",
+    ],
+    faqs: [
+      { q: "What should I look for in a dentist in Mombasa?", a: "Look for clear diagnosis, modern equipment, gentle treatment, transparent communication, emergency support and a clinic that offers the services your family needs." },
+      { q: "Does Lebanon Dental Care treat both adults and children?", a: "Yes. The clinic provides dental care for adults, children and families, including preventive care, cosmetic treatments, orthodontics and emergency dentistry." },
+      { q: "Can I book a dental appointment through WhatsApp?", a: "Yes. You can book directly through WhatsApp for fast confirmation, or call the emergency line for urgent dental pain or trauma." },
+    ],
+    internalLinks: [
+      { kind: "route", label: "Book an appointment", to: "/book" },
+      { kind: "route", label: "View all dental services", to: "/services" },
+      { kind: "service", label: "Teeth Cleaning", slug: "teeth-cleaning" },
+      { kind: "service", label: "Emergency Dental Care", slug: "emergency-dental-care" },
+    ],
+  },
+  {
+    slug: "dental-hospitals-in-mombasa",
+    title: "Dental Hospitals in Mombasa: When to Visit a Dental Clinic and What to Expect",
+    excerpt: "What patients should know when searching for dental hospitals and dental clinics in Mombasa for pain relief, checkups and smile treatment.",
+    image: IMAGES.clinic,
+    date: "Jun 12, 2026",
+    read: "6 min",
+    seoTitle: "Dental Hospitals in Mombasa | Lebanon Dental Care",
+    seoDescription: "Searching for dental hospitals in Mombasa? Learn when to visit a dentist, what happens during treatment and how Lebanon Dental Care helps patients.",
+    keywords: "dental hospitals in Mombasa, dental clinic Mombasa, dentist Mombasa, dental hospital Kenya, Lebanon Dental Care, Lebanon Dentals",
+    ctaServiceName: "Dental Checkup",
+    serviceSlug: "emergency-dental-care",
+    content: [
+      "Patients often search for dental hospitals in Mombasa when they have tooth pain, swelling, bleeding gums, a broken tooth or a problem that has started affecting eating, sleeping or speaking. A dental clinic is the right place to diagnose the cause quickly and provide treatment before the condition becomes more serious.",
+      "During your visit, the dentist checks the teeth, gums, bite and soft tissues, then may recommend an X-ray where needed. This helps confirm whether the issue is decay, infection, gum disease, trauma, impacted teeth or a failed filling. A clear diagnosis prevents guesswork and makes treatment safer and more predictable.",
+      "The expected result depends on the service. A cleaning should leave the mouth fresher and gums healthier. A filling should restore tooth shape and stop decay from spreading. A root canal should remove infection and save the natural tooth. An extraction should relieve pain when a tooth cannot be saved. Cosmetic treatments should improve smile appearance while protecting function.",
+      "Lebanon Dental Care supports patients who need routine dentistry and urgent care. The team handles cleanings, fillings, root canal treatment, braces, dentures, oral habit appliances, teeth grinding management, children’s dentistry and emergency dental care, giving families one place for most dental needs.",
+      "If you are unsure whether your dental problem is urgent, contact the clinic. Tooth pain, facial swelling, trauma, bleeding that does not stop, fever with dental pain or a broken tooth should be assessed quickly through an emergency appointment.",
+    ],
+    faqs: [
+      { q: "When should I visit a dental clinic urgently?", a: "Visit urgently for severe toothache, swelling, trauma, a broken tooth, bleeding that will not stop, infection signs or pain that affects sleep." },
+      { q: "Do dental hospitals in Mombasa offer routine cleanings?", a: "Yes. Routine checkups and professional cleanings are important preventive services that help avoid gum disease, cavities and costly dental emergencies." },
+      { q: "Can one clinic handle both emergency and cosmetic dental care?", a: "Yes. Lebanon Dental Care provides urgent dental care as well as preventive, restorative, orthodontic and cosmetic treatments." },
+    ],
+    internalLinks: [
+      { kind: "service", label: "Emergency Dental Care", slug: "emergency-dental-care" },
+      { kind: "service", label: "Root Canal Treatment", slug: "root-canal-treatment" },
+      { kind: "service", label: "Teeth Filling", slug: "teeth-filling" },
+      { kind: "route", label: "Contact Lebanon Dental Care", to: "/contact" },
+    ],
+  },
+  {
+    slug: "root-canal-treatment",
+    title: "Root Canal Treatment in Mombasa: Save Your Tooth and Stop Dental Pain",
+    excerpt: "A patient-friendly guide to root canal treatment, symptoms, results and when to book an appointment in Mombasa.",
+    image: IMAGES.rootCanal,
+    date: "Jun 06, 2026",
+    read: "7 min",
+    seoTitle: "Root Canal Treatment in Mombasa | Lebanon Dental Care",
+    seoDescription: "Need root canal treatment in Mombasa? Learn symptoms, procedure steps, results and how Lebanon Dental Care helps save infected teeth.",
+    keywords: "root canal treatment Mombasa, root canal Kenya, tooth pain Mombasa, dental infection treatment, Lebanon Dental Care, dentist Mombasa",
+    ctaServiceName: "Root Canal Treatment",
+    serviceSlug: "root-canal-treatment",
+    content: [
+      "Root canal treatment is used to save a tooth when the nerve or pulp inside becomes infected or inflamed. This often happens because of deep decay, a cracked tooth, repeated dental work or an untreated cavity. Common symptoms include severe toothache, pain when biting, prolonged sensitivity to hot or cold, gum swelling, a darkened tooth or a pimple-like swelling near the gum.",
+      "The main result patients want is relief from pain — and that is exactly what root canal treatment is designed to achieve. Once the infected pulp is removed and the canals are cleaned, the pressure and inflammation inside the tooth reduce. Many patients feel much better shortly after treatment and can return to normal eating once the tooth is restored.",
+      "At Lebanon Dental Care, the process starts with diagnosis and an X-ray. The tooth is numbed, the infected tissue is carefully removed, the canals are cleaned and shaped, and the space is sealed to prevent reinfection. In many cases, a crown is recommended afterward to protect the tooth from fracture and restore full chewing strength.",
+      "Saving a natural tooth is usually better than removing it. Extraction may stop pain, but it leaves a gap that can affect chewing, speech, alignment and jawbone support. A successful root canal allows you to keep your tooth, maintain your bite and avoid the extra cost of replacing a missing tooth later.",
+      "If you have ongoing tooth pain in Mombasa, do not wait for the infection to spread. Book a root canal assessment early so the dentist can confirm whether the tooth can be saved and start treatment before swelling or severe infection develops.",
+    ],
+    faqs: [
+      { q: "Is root canal treatment painful?", a: "Modern root canal treatment is done with local anaesthesia, so most patients feel pressure rather than pain. It is often compared to having a filling." },
+      { q: "How many visits does a root canal take?", a: "Many root canals take one to two visits, depending on the tooth, infection level and whether a crown or additional restoration is needed." },
+      { q: "What result should I expect after a root canal?", a: "The goal is pain relief, infection control and saving your natural tooth so you can chew comfortably again." },
+    ],
+    internalLinks: [
+      { kind: "service", label: "Root Canal Treatment Service", slug: "root-canal-treatment" },
+      { kind: "service", label: "Teeth Filling", slug: "teeth-filling" },
+      { kind: "service", label: "Fixed Dentures & Crowns", slug: "fixed-dentures" },
+      { kind: "blog", label: "When Should You Visit a Dentist?", slug: "when-should-you-visit-a-dentist" },
+    ],
+  },
+  {
+    slug: "emergency-dentist-in-mombasa",
+    title: "Emergency Dentist in Mombasa: What to Do for Tooth Pain, Swelling or Trauma",
+    excerpt: "Know the signs of a dental emergency and how to get fast help for severe toothache, swelling, broken teeth or dental injuries.",
+    image: IMAGES.treatingPatient2,
+    date: "May 30, 2026",
+    read: "6 min",
+    seoTitle: "Emergency Dentist in Mombasa | Lebanon Dental Care",
+    seoDescription: "Need an emergency dentist in Mombasa? Learn what to do for tooth pain, swelling, broken teeth and trauma, and book urgent dental care.",
+    keywords: "emergency dentist Mombasa, toothache Mombasa, dental emergency Kenya, urgent dentist Mombasa, broken tooth treatment, Lebanon Dental Care",
+    ctaServiceName: "Emergency Dental Care",
+    serviceSlug: "emergency-dental-care",
+    content: [
+      "Dental emergencies are problems that need fast attention because they involve severe pain, infection, trauma or bleeding. A toothache that keeps you awake, facial swelling, a knocked-out tooth, a broken tooth, pus around the gum or pain with fever should never be ignored. These symptoms can worsen quickly without treatment.",
+      "The first goal in an emergency appointment is to reduce pain and stop the problem from spreading. The dentist checks the cause, may take an X-ray and then recommends the safest immediate treatment. This may include medication, drainage of infection, a filling, root canal treatment, extraction or temporary stabilisation of a broken tooth.",
+      "Results depend on how quickly you seek help. Early treatment can save teeth that might otherwise be lost, prevent infection from spreading to the face or jaw, and help you return to normal eating and sleeping sooner. Waiting often makes treatment more complicated and more expensive.",
+      "If a tooth is knocked out, hold it by the crown, avoid scrubbing the root, keep it moist in milk or saliva and call the clinic immediately. For swelling, do not apply heat to the face; contact the emergency line for guidance. For a broken tooth, keep any fragments and avoid chewing on that side until you are seen.",
+      "Lebanon Dental Care provides urgent support for dental pain and emergencies in Mombasa and nearby areas. Use the emergency number for urgent cases and the booking form for planned appointments.",
+    ],
+    faqs: [
+      { q: "What counts as a dental emergency?", a: "Severe toothache, swelling, trauma, uncontrolled bleeding, broken teeth, knocked-out teeth and signs of infection should be treated as urgent." },
+      { q: "Can an emergency dentist save a painful tooth?", a: "Often yes. If treated early, root canal treatment, fillings or other procedures may save the natural tooth." },
+      { q: "Should I call before coming for an emergency?", a: "Yes. Calling helps the team prepare, advise you on immediate steps and guide you to the fastest available care." },
+    ],
+    internalLinks: [
+      { kind: "service", label: "Emergency Dental Care", slug: "emergency-dental-care" },
+      { kind: "service", label: "Root Canal Treatment", slug: "root-canal-treatment" },
+      { kind: "service", label: "Tooth Extraction", slug: "tooth-extraction" },
+      { kind: "route", label: "Book urgent appointment", to: "/book" },
+    ],
+  },
+  {
+    slug: "lebanon-dental-care-mombasa",
+    title: "Lebanon Dental Care Mombasa: Dental Services, Results and How to Book",
+    excerpt: "Learn about Lebanon Dental Care, the treatments available and how patients can book dental appointments in Mombasa.",
+    image: IMAGES.drRajab,
+    date: "May 24, 2026",
+    read: "6 min",
+    seoTitle: "Lebanon Dental Care Mombasa | Lebanon Dentals Official Website",
+    seoDescription: "Official Lebanon Dental Care website. Explore dental services in Mombasa, results patients can expect and how to book through WhatsApp.",
+    keywords: "Lebanon Dental Care, Lebanon Dentals, Lebanon Dental Care Mombasa, dental clinic Mombasa, dentist Mombasa, dental hospital Mombasa",
+    ctaServiceName: "Dental Appointment",
+    serviceSlug: "teeth-cleaning",
+    content: [
+      "Lebanon Dental Care is a dental clinic serving patients in Mombasa and nearby areas with preventive, restorative, cosmetic, orthodontic, children’s and emergency dental care. Patients searching for Lebanon Dentals or Lebanon Dental Care online should use the official website to explore services and book appointments directly.",
+      "The clinic provides professional teeth cleaning, fillings, root canal treatment, tooth extraction, surgical extraction, braces, removable orthodontic appliances, retainers, dentures, crowns and bridges, oral habit management, teeth grinding management, children’s dentistry, gum disease treatment and smile makeover services.",
+      "The result of good dental care is not only a better-looking smile. Patients also want pain relief, stronger chewing, healthier gums, fresher breath, better tooth alignment, protection from grinding damage and confidence when speaking or smiling. Each treatment plan is built around the patient’s concern and the long-term health of the mouth.",
+      "Booking is straightforward. You can use the appointment form to send your details through WhatsApp for fast confirmation. For emergencies such as severe toothache, swelling, broken teeth or trauma, use the emergency contact number so the team can guide you quickly.",
+      "If you have been relying only on the Google Business Profile, this website gives more detail about services, treatment expectations, FAQs and direct booking options so you can make an informed decision before visiting the clinic.",
+    ],
+    faqs: [
+      { q: "Is this the official Lebanon Dental Care website?", a: "Yes. This website provides official information about Lebanon Dental Care services, contacts, appointment booking and patient guides." },
+      { q: "What dental services does Lebanon Dental Care offer?", a: "Services include cleanings, fillings, root canals, extractions, braces, dentures, retainers, children’s dentistry, gum treatment, emergency care and cosmetic dentistry." },
+      { q: "How do I book at Lebanon Dental Care?", a: "Use the booking page or WhatsApp button to send your appointment request. For urgent pain or trauma, call the emergency line." },
+    ],
+    internalLinks: [
+      { kind: "route", label: "Book an appointment", to: "/book" },
+      { kind: "route", label: "About Lebanon Dental Care", to: "/about" },
+      { kind: "route", label: "Contact the clinic", to: "/contact" },
+      { kind: "service", label: "Emergency Dental Care", slug: "emergency-dental-care" },
+    ],
+  },
+  {
     slug: "benefits-of-teeth-cleaning",
-    title: "Benefits of Teeth Cleaning",
+    title: "Benefits of Teeth Cleaning: Why a Six-Month Professional Cleaning Matters",
     excerpt: "Why a 6-month professional cleaning is essential for healthy gums and a brighter smile.",
     image: IMAGES.treatingPatient1,
     date: "May 10, 2026",
     read: "4 min",
+    seoTitle: "Benefits of Teeth Cleaning in Mombasa | Lebanon Dental Care",
+    seoDescription: "Learn why six-month professional teeth cleaning improves gum health, fresh breath and brighter smiles. Book teeth cleaning in Mombasa today.",
+    keywords: "teeth cleaning Mombasa, dental cleaning Kenya, professional teeth cleaning, healthy gums, Lebanon Dental Care",
+    ctaServiceName: "Teeth Cleaning",
+    serviceSlug: "teeth-cleaning",
     content: [
       "Professional teeth cleaning is one of the simplest and most effective ways to protect your oral health. Even with diligent brushing and flossing, plaque and tartar build up in places a toothbrush cannot reach — especially along the gumline and between the back teeth. Left alone, this hardened deposit irritates the gums and is the leading cause of tooth decay and gum disease.",
       "During a cleaning at Lebanon Dental Care, our hygienists use ultrasonic scalers to gently lift away tartar, followed by a polish that removes surface stains from coffee, tea and tobacco. The result is brighter, smoother teeth and noticeably fresher breath. We finish with a fluoride application that strengthens enamel and helps prevent new cavities for months.",
       "Most patients benefit from a professional cleaning every six months. If you smoke, have a history of gum disease or wear braces, we may recommend more frequent visits. Regular cleanings cost far less than the fillings, root canals and extractions they help you avoid — making them the single best investment in your long-term smile.",
+      "The results are easy to notice: gums bleed less, breath feels fresher, stains reduce and your teeth feel smoother when you run your tongue over them. Cleaning also gives the dentist a chance to spot cavities, gum pockets or early cracks before they become painful emergencies.",
+    ],
+    faqs: [
+      { q: "How often should I book teeth cleaning?", a: "Most patients should book professional teeth cleaning every six months, while patients with gum disease, braces or heavy tartar may need more frequent visits." },
+      { q: "Does professional cleaning whiten teeth?", a: "Cleaning removes surface stains and can make teeth look brighter, but it is different from whitening treatment that changes tooth shade." },
+      { q: "What results should I expect after cleaning?", a: "Expect smoother teeth, fresher breath, reduced tartar and healthier gums when combined with good brushing and flossing at home." },
+    ],
+    internalLinks: [
+      { kind: "service", label: "Teeth Cleaning Service", slug: "teeth-cleaning" },
+      { kind: "service", label: "Gum Disease Treatment", slug: "gum-disease-treatment" },
+      { kind: "blog", label: "Daily Dental Hygiene Tips", slug: "dental-hygiene-tips" },
+      { kind: "route", label: "Book teeth cleaning", to: "/book" },
     ],
   },
   {
@@ -546,10 +729,27 @@ export const BLOG_POSTS: BlogPost[] = [
     image: IMAGES.whiteningProcess,
     date: "May 02, 2026",
     read: "6 min",
+    seoTitle: "How Braces Improve Your Smile | Braces in Mombasa",
+    seoDescription: "Learn how braces improve alignment, bite function, cleaning and smile confidence. Book orthodontic consultation at Lebanon Dental Care.",
+    keywords: "braces Mombasa, orthodontics Kenya, fixed braces, removable orthodontic appliances, Lebanon Dental Care",
+    ctaServiceName: "Braces Consultation",
+    serviceSlug: "fixed-orthodontics",
     content: [
       "Braces do far more than straighten crooked teeth. By gradually guiding teeth into their ideal positions, they correct overbites, underbites, crossbites and crowding — all of which can cause uneven wear, jaw pain and difficulty chewing if left untreated. A properly aligned bite also makes brushing and flossing easier, which lowers your risk of cavities and gum disease for the rest of your life.",
       "At Lebanon Dental Care we offer modern fixed braces with smaller, more comfortable brackets, as well as removable orthodontic appliances for milder cases and growing children. Treatment typically takes 12 to 24 months, with short monthly adjustment visits. Most patients are surprised by how quickly they get used to wearing them and how visible the progress becomes within just a few months.",
       "The confidence boost that follows is just as important as the clinical result. Patients tell us they smile more freely in photos, speak more openly in meetings and feel better about themselves day to day. After treatment we provide custom retainers so your new smile stays exactly where it should — for good.",
+      "The best results come from correct diagnosis, consistent appointments and wearing retainers after treatment. This protects the investment and keeps the teeth stable long after braces are removed.",
+    ],
+    faqs: [
+      { q: "How long do braces take?", a: "Many braces cases take 12 to 24 months, depending on crowding, bite correction and patient cooperation." },
+      { q: "Do braces only improve appearance?", a: "No. Braces also improve bite function, cleaning access, speech comfort and long-term tooth wear." },
+      { q: "Will I need retainers after braces?", a: "Yes. Retainers help keep the teeth in their corrected positions after orthodontic treatment." },
+    ],
+    internalLinks: [
+      { kind: "service", label: "Fixed Orthodontics", slug: "fixed-orthodontics" },
+      { kind: "service", label: "Removable Appliances", slug: "removable-orthodontic-appliances" },
+      { kind: "service", label: "Dental Retainers", slug: "dental-retainers" },
+      { kind: "route", label: "Book braces consultation", to: "/book" },
     ],
   },
   {
@@ -559,10 +759,27 @@ export const BLOG_POSTS: BlogPost[] = [
     image: IMAGES.cavities,
     date: "Apr 18, 2026",
     read: "5 min",
+    seoTitle: "Understanding Root Canal Treatment | Dentist in Mombasa",
+    seoDescription: "Understand root canal treatment, symptoms, pain relief and tooth-saving results from Lebanon Dental Care in Mombasa.",
+    keywords: "root canal treatment, root canal Mombasa, tooth infection, tooth pain, Lebanon Dental Care",
+    ctaServiceName: "Root Canal Treatment",
+    serviceSlug: "root-canal-treatment",
     content: [
       "A root canal is needed when the soft pulp inside a tooth becomes infected or inflamed — usually from deep decay, a cracked tooth or repeated dental work. Without treatment the infection spreads, leading to severe pain, swelling and eventual loss of the tooth. The good news is that a root canal saves the tooth and stops the pain almost immediately.",
       "Modern techniques have made root canal treatment routine and comfortable. We numb the area thoroughly, gently remove the infected pulp, clean and shape the inner canals, then seal them to prevent re-infection. Most patients tell us it feels no different from having a filling, and many sleep that night without pain for the first time in weeks.",
       "After the canal is sealed, a crown is usually placed to protect the tooth and restore full chewing strength. With good oral hygiene a root-canal-treated tooth can last a lifetime — far better than extraction, which leads to bone loss and the need for an implant or bridge.",
+      "The most important result is keeping your natural tooth. Early treatment can stop infection, restore chewing comfort and prevent the gap that follows extraction." ,
+    ],
+    faqs: [
+      { q: "Can a root canal stop tooth pain?", a: "Yes. Removing infected pulp and sealing the canals is designed to stop pain and control infection." },
+      { q: "Is extraction better than root canal treatment?", a: "When a tooth can be saved, root canal treatment is usually preferred because it preserves natural chewing and avoids a missing-tooth gap." },
+      { q: "Will I need a crown after treatment?", a: "Back teeth and heavily damaged teeth often need crowns to restore strength after root canal treatment." },
+    ],
+    internalLinks: [
+      { kind: "blog", label: "Root Canal Treatment in Mombasa", slug: "root-canal-treatment" },
+      { kind: "service", label: "Root Canal Treatment Service", slug: "root-canal-treatment" },
+      { kind: "service", label: "Fixed Dentures & Crowns", slug: "fixed-dentures" },
+      { kind: "route", label: "Book root canal assessment", to: "/book" },
     ],
   },
   {

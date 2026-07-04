@@ -1,7 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { ArrowLeft, Calendar, Clock, MessageCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Clock, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/site/Layout";
 import { BLOG_POSTS, buildWhatsAppUrl } from "@/data/clinic";
+
+const SITE_URL = "https://smile-bright-leb.lovable.app";
+const absoluteImage = (src: string) => (src.startsWith("http") ? src : `${SITE_URL}${src.startsWith("/") ? src : `/${src}`}`);
 
 export const Route = createFileRoute("/blog/$slug")({
   loader: ({ params }) => {
@@ -10,23 +13,23 @@ export const Route = createFileRoute("/blog/$slug")({
     return post;
   },
   head: ({ loaderData, params }) => {
-    const url = `https://smile-bright-leb.lovable.app/blog/${params.slug}`;
+    const url = `${SITE_URL}/blog/${params.slug}`;
     if (!loaderData) return { meta: [{ title: "Article not found" }, { name: "robots", content: "noindex" }] };
     const p = loaderData;
     return {
       meta: [
-        { title: `${p.title} | Lebanon Dental Care Blog` },
-        { name: "description", content: p.excerpt },
-        { name: "keywords", content: `${p.title}, dental blog Kenya, dentist Mombasa, Lebanon Dental Care` },
-        { property: "og:title", content: p.title },
+        { title: p.seoTitle ?? `${p.title} | Lebanon Dental Care Blog` },
+        { name: "description", content: p.seoDescription ?? p.excerpt },
+        { name: "keywords", content: p.keywords ?? `${p.title}, dental blog Kenya, dentist Mombasa, Lebanon Dental Care` },
+        { property: "og:title", content: p.seoTitle ?? p.title },
         { property: "og:description", content: p.excerpt },
-        { property: "og:image", content: p.image },
+        { property: "og:image", content: absoluteImage(p.image) },
         { property: "og:url", content: url },
         { property: "og:type", content: "article" },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: p.title },
+        { name: "twitter:title", content: p.seoTitle ?? p.title },
         { name: "twitter:description", content: p.excerpt },
-        { name: "twitter:image", content: p.image },
+        { name: "twitter:image", content: absoluteImage(p.image) },
       ],
       links: [{ rel: "canonical", href: url }],
       scripts: [
@@ -37,8 +40,9 @@ export const Route = createFileRoute("/blog/$slug")({
             "@type": "Article",
             headline: p.title,
             description: p.excerpt,
-            image: p.image,
+            image: absoluteImage(p.image),
             datePublished: p.date,
+            articleBody: p.content.join("\n\n"),
             author: { "@type": "Organization", name: "Lebanon Dental Care" },
             publisher: {
               "@type": "Organization",
@@ -48,6 +52,22 @@ export const Route = createFileRoute("/blog/$slug")({
             mainEntityOfPage: url,
           }),
         },
+        ...(p.faqs && p.faqs.length > 0
+          ? [
+              {
+                type: "application/ld+json",
+                children: JSON.stringify({
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: p.faqs.map((f) => ({
+                    "@type": "Question",
+                    name: f.q,
+                    acceptedAnswer: { "@type": "Answer", text: f.a },
+                  })),
+                }),
+              },
+            ]
+          : []),
         {
           type: "application/ld+json",
           children: JSON.stringify({
@@ -84,6 +104,7 @@ export const Route = createFileRoute("/blog/$slug")({
 function BlogPostPage() {
   const post = Route.useLoaderData() as (typeof BLOG_POSTS)[number];
   const wa = buildWhatsAppUrl(`Hello Lebanon Dental Care, I read your article "${post.title}" and would like to book a consultation.`);
+  const serviceCta = post.serviceSlug ? `Book ${post.ctaServiceName ?? "This Service"}` : "Book Appointment";
 
   return (
     <SiteLayout>
@@ -105,15 +126,66 @@ function BlogPostPage() {
           ))}
         </div>
 
+        {post.internalLinks && post.internalLinks.length > 0 && (
+          <section className="mt-8 rounded-2xl border border-border bg-accent/40 p-5">
+            <h2 className="font-display text-xl font-bold text-foreground">Related dental services and guides</h2>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {post.internalLinks.map((link) => {
+                if (link.kind === "service") {
+                  return (
+                    <Link key={`${link.kind}-${link.slug}`} to="/services/$slug" params={{ slug: link.slug }} className="inline-flex items-center gap-1 rounded-full bg-card px-4 py-2 text-sm font-semibold text-secondary border border-border hover:text-primary transition">
+                      {link.label} <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  );
+                }
+                if (link.kind === "blog") {
+                  return (
+                    <Link key={`${link.kind}-${link.slug}`} to="/blog/$slug" params={{ slug: link.slug }} className="inline-flex items-center gap-1 rounded-full bg-card px-4 py-2 text-sm font-semibold text-secondary border border-border hover:text-primary transition">
+                      {link.label} <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  );
+                }
+                return (
+                  <Link key={`${link.kind}-${link.to}`} to={link.to} className="inline-flex items-center gap-1 rounded-full bg-card px-4 py-2 text-sm font-semibold text-secondary border border-border hover:text-primary transition">
+                    {link.label} <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {post.faqs && post.faqs.length > 0 && (
+          <section className="mt-10">
+            <h2 className="font-display text-2xl font-bold text-foreground">Frequently Asked Questions</h2>
+            <div className="mt-5 space-y-3">
+              {post.faqs.map((f) => (
+                <details key={f.q} className="group bg-card rounded-2xl border border-border p-5 open:shadow-card">
+                  <summary className="cursor-pointer flex items-center justify-between font-semibold text-foreground list-none">
+                    {f.q}
+                    <span className="ml-3 grid place-items-center w-7 h-7 rounded-full bg-accent text-secondary group-open:rotate-45 transition">+</span>
+                  </summary>
+                  <p className="mt-3 text-muted-foreground">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
         <div className="mt-10 rounded-3xl bg-gradient-brand p-6 md:p-8 text-white shadow-brand flex flex-wrap items-center justify-between gap-4">
           <div>
             <h2 className="text-xl md:text-2xl font-display font-bold">Ready to take action on your smile?</h2>
-            <p className="mt-1 text-white/85 text-sm">Book a consultation with the Lebanon Dental Care team today.</p>
+            <p className="mt-1 text-white/85 text-sm">Book a consultation with the Lebanon Dental Care team today, or call our emergency line for urgent dental pain.</p>
           </div>
           <div className="flex flex-wrap gap-3">
             <Link to="/book" className="inline-flex items-center gap-2 bg-white text-secondary px-5 py-3 rounded-full font-bold">
-              <Calendar className="w-4 h-4" /> Book Appointment
+              <Calendar className="w-4 h-4" /> {serviceCta}
             </Link>
+            {post.serviceSlug && (
+              <Link to="/services/$slug" params={{ slug: post.serviceSlug }} className="inline-flex items-center gap-2 bg-white/15 text-white px-5 py-3 rounded-full font-bold border border-white/30">
+                View Service <ArrowRight className="w-4 h-4" />
+              </Link>
+            )}
             <a href={wa} target="_blank" rel="noopener" className="inline-flex items-center gap-2 bg-[var(--whatsapp)] text-white px-5 py-3 rounded-full font-bold">
               <MessageCircle className="w-4 h-4" /> WhatsApp
             </a>

@@ -41,8 +41,8 @@ function ContactPage() {
 
         <div className="rounded-3xl overflow-hidden shadow-card border border-border bg-card">
           <iframe
-            title="Lebanon Dental Care Location"
-            src="https://www.google.com/maps?q=Lebanon+Dental+Care&output=embed"
+            title="Lebanon Dental Care Clinic Location"
+            src="https://maps.google.com/maps?q=-4.0545617,39.6670509&z=18&output=embed"
             className="w-full h-[420px] border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

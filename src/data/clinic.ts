@@ -111,7 +111,7 @@ export const CLINIC = {
   ],
   address: "Lebanon Dental Care Clinic, Kenya",
   mapLink:
-    "https://www.google.com/local/place/fid/0x184013573c0284cb:0x47817c1945afde0a/photosphere?iu=https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid%3D7SMSHFHPjvccUIcH_Yw6fQ%26cb_client%3Dsearch.gws-prod.gps%26yaw%3D172.86574%26pitch%3D0%26thumbfov%3D100%26w%3D0%26h%3D0&ik=CAISFjdTTVNIRkhQanZjY1VJY0hfWXc2ZlE%3D",
+    "https://www.google.com/maps/place/LEBANON+DENTAL+CARE+CLINIC/@-4.0545359,39.6670276,3a,38.2y,148.94h,86.45t/data=!3m7!1e1!3m5!1s2PFgbA1aow9GI0UsszJ9gA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D3.549999999999997%26panoid%3D2PFgbA1aow9GI0UsszJ9gA%26yaw%3D148.94!7i16384!8i8192!4m7!3m6!1s0x184013573c0284cb:0x47817c1945afde0a!8m2!3d-4.0545617!4d39.6670509!10e5!16s%2Fg%2F11yvtj7jlk?entry=ttu",
 };
 
 export const buildWhatsAppUrl = (message: string, phone = CLINIC.whatsapp) =>

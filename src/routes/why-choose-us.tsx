@@ -91,16 +91,22 @@ function WhyChooseUsPage() {
         image={IMAGES.clinic}
       />
 
-      <section className="container-page py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {reasons.map((r) => (
-          <div key={r.title} className="bg-card rounded-2xl p-6 shadow-card border border-border hover:shadow-brand transition">
-            <span className="grid place-items-center w-12 h-12 rounded-2xl bg-gradient-brand text-white">
-              <r.icon className="w-6 h-6" />
-            </span>
-            <h3 className="mt-4 font-display text-lg font-bold">{r.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{r.text}</p>
-          </div>
-        ))}
+      <section className="container-page py-16">
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="text-3xl md:text-4xl font-display font-bold">Why Patients Across Mombasa Choose Lebanon Dental Care</h2>
+          <p className="mt-3 text-muted-foreground">Eight reasons families in Nyali, Bamburi, Shanzu, Mtwapa and Kilifi trust us with their smiles.</p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {reasons.map((r) => (
+            <div key={r.title} className="bg-card rounded-2xl p-6 shadow-card border border-border hover:shadow-brand transition">
+              <span className="grid place-items-center w-12 h-12 rounded-2xl bg-gradient-brand text-white">
+                <r.icon className="w-6 h-6" />
+              </span>
+              <h3 className="mt-4 font-display text-lg font-bold">{r.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{r.text}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section className="bg-gradient-brand-soft py-16">

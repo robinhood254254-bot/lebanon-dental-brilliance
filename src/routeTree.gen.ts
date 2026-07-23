@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WhyChooseUsRouteImport } from './routes/why-choose-us'
 import { Route as TestimonialsRouteImport } from './routes/testimonials'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -21,6 +22,11 @@ import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ServicesSlugRouteImport } from './routes/services/$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
+const WhyChooseUsRoute = WhyChooseUsRouteImport.update({
+  id: '/why-choose-us',
+  path: '/why-choose-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TestimonialsRoute = TestimonialsRouteImport.update({
   id: '/testimonials',
   path: '/testimonials',
@@ -85,6 +91,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -97,6 +104,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/blog': typeof BlogIndexRoute
@@ -111,6 +119,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/testimonials': typeof TestimonialsRoute
+  '/why-choose-us': typeof WhyChooseUsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/services/$slug': typeof ServicesSlugRoute
   '/blog/': typeof BlogIndexRoute
@@ -126,6 +135,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/why-choose-us'
     | '/blog/$slug'
     | '/services/$slug'
     | '/blog/'
@@ -138,6 +148,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/why-choose-us'
     | '/blog/$slug'
     | '/services/$slug'
     | '/blog'
@@ -151,6 +162,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/sitemap.xml'
     | '/testimonials'
+    | '/why-choose-us'
     | '/blog/$slug'
     | '/services/$slug'
     | '/blog/'
@@ -165,12 +177,20 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TestimonialsRoute: typeof TestimonialsRoute
+  WhyChooseUsRoute: typeof WhyChooseUsRoute
   ServicesSlugRoute: typeof ServicesSlugRoute
   ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/why-choose-us': {
+      id: '/why-choose-us'
+      path: '/why-choose-us'
+      fullPath: '/why-choose-us'
+      preLoaderRoute: typeof WhyChooseUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/testimonials': {
       id: '/testimonials'
       path: '/testimonials'
@@ -271,19 +291,10 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TestimonialsRoute: TestimonialsRoute,
+  WhyChooseUsRoute: WhyChooseUsRoute,
   ServicesSlugRoute: ServicesSlugRoute,
   ServicesIndexRoute: ServicesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

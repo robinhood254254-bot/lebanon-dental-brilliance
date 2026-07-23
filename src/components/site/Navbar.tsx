@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { Menu, X, Calendar, ChevronDown } from "lucide-react";
 import { LOGO, SERVICES } from "@/data/clinic";
 
-const links = [
+type NavLink = { to: string; label: string; hasMega?: boolean };
+const links: NavLink[] = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About Us" },
   { to: "/services", label: "Services", hasMega: true },
@@ -11,7 +12,7 @@ const links = [
   { to: "/blog", label: "Blog" },
   { to: "/testimonials", label: "Testimonials" },
   { to: "/contact", label: "Contact" },
-] as const;
+];
 
 export function Navbar() {
   const [open, setOpen] = useState(false);

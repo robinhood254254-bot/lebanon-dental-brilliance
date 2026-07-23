@@ -129,7 +129,26 @@ function WhyChooseUsPage() {
         </div>
       </section>
 
-      <section className="container-page py-16 text-center">
+      <section className="container-page py-16">
+        <div className="text-center max-w-3xl mx-auto">
+          <div className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">FAQs</div>
+          <h2 className="mt-2 text-3xl md:text-4xl font-display font-bold">Frequently Asked Questions</h2>
+          <p className="mt-3 text-muted-foreground">Everything patients across Mombasa most commonly ask before booking their first visit.</p>
+        </div>
+        <div className="mt-10 max-w-3xl mx-auto grid gap-4">
+          {FAQS.map((f) => (
+            <details key={f.q} className="group bg-card rounded-2xl border border-border p-5 shadow-card">
+              <summary className="cursor-pointer list-none flex items-center justify-between gap-4">
+                <h3 className="font-display text-base md:text-lg font-bold text-foreground">{f.q}</h3>
+                <span className="text-secondary transition-transform group-open:rotate-45 text-2xl leading-none">+</span>
+              </summary>
+              <p className="mt-3 text-muted-foreground">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-page pb-16 text-center">
         <h2 className="text-3xl md:text-4xl font-display font-bold">Ready For A Healthier, Brighter Smile?</h2>
         <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">Join over 1,000 patients who trust Lebanon Dental Care with their smiles. Book your appointment today — we'll take it from there.</p>
         <div className="mt-6 flex flex-wrap gap-3 justify-center">

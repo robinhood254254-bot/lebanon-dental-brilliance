@@ -3,20 +3,60 @@ import { Award, HeartHandshake, ShieldCheck, Sparkles, Stethoscope, Clock, Users
 import { PageHero, SiteLayout } from "@/components/site/Layout";
 import { CLINIC, IMAGES } from "@/data/clinic";
 
+const FAQS = [
+  { q: "What makes Lebanon Dental Care the best dental clinic in Mombasa?", a: "Over 7 years of experience, modern digital equipment, hospital-grade sterilisation, transparent pricing and a genuinely gentle, patient-first approach — trusted by 1,000+ patients across Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi." },
+  { q: "Do you accept walk-ins or emergency dental visits?", a: "Yes. We keep same-day slots open for emergencies like severe tooth pain, swelling, broken teeth or dental trauma. Our 24/7 emergency line is +254 736 123 234." },
+  { q: "Are your dental treatments affordable?", a: "We publish transparent pricing and explain every cost before treatment begins. We also offer flexible payment plans on major procedures like braces, veneers, implants and full-mouth rehabilitation." },
+  { q: "Is the clinic child-friendly?", a: "Absolutely. We have dedicated children's dentistry with a calm, welcoming environment, kid-safe language and habit-management services like thumb-sucking appliances and mouthguards." },
+  { q: "How safe and sterile is your clinic?", a: "We follow strict hospital-grade sterilisation protocols with autoclaved instruments and single-use disposables on every chair, every visit — the same standards used in leading dental hospitals." },
+  { q: "What areas do you serve around Mombasa?", a: "We serve patients across Mombasa County including Nyali, Bamburi, Shanzu, Mtwapa, Kilifi and the wider Kenyan coast. Many patients also travel from Nairobi for cosmetic and orthodontic care." },
+  { q: "How do I book an appointment?", a: "Use the Book Now button on any page, or message us directly on WhatsApp at +254 706 194 409. We usually confirm within minutes during working hours." },
+];
+
 export const Route = createFileRoute("/why-choose-us")({
   head: () => ({
     meta: [
-      { title: "Why Choose Lebanon Dental Care Clinic | Trusted Dentist in Mombasa" },
-      { name: "description", content: "Discover why families across Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi choose Lebanon Dental Care — 7+ years of experience, modern equipment, gentle care and transparent pricing." },
-      { name: "keywords", content: "why choose Lebanon Dental Care, best dental clinic Mombasa, trusted dentist Kenya, gentle dentist Mombasa, affordable dental care Mombasa" },
-      { property: "og:title", content: "Why Choose Lebanon Dental Care Clinic" },
-      { property: "og:description", content: "7+ years of trusted, gentle, modern dental care in Mombasa, Kenya." },
+      { title: "Why Choose Us | Best Dental Clinic in Mombasa, Kenya | Lebanon Dental Care" },
+      { name: "description", content: "Why 1,000+ patients choose Lebanon Dental Care Clinic in Mombasa: 7+ years experience, modern equipment, gentle care, transparent pricing and 24/7 emergency dentistry across Nyali, Bamburi, Shanzu, Mtwapa and Kilifi." },
+      { name: "keywords", content: "why choose Lebanon Dental Care, best dental clinic Mombasa, trusted dentist Kenya, gentle dentist Mombasa, affordable dental care Mombasa, emergency dentist Mombasa, family dentist Kenya, dental clinic Nyali, dental clinic Bamburi" },
+      { name: "robots", content: "index, follow" },
+      { name: "author", content: "Lebanon Dental Care Clinic" },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: "Why Choose Lebanon Dental Care Clinic | Trusted Dentist in Mombasa" },
+      { property: "og:description", content: "7+ years of trusted, gentle, modern dental care in Mombasa, Kenya — with 24/7 emergency dentistry and transparent pricing." },
       { property: "og:image", content: IMAGES.dentist },
       { property: "og:url", content: "https://smile-bright-leb.lovable.app/why-choose-us" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Why Choose Lebanon Dental Care Clinic" },
+      { name: "twitter:description", content: "The trusted dental clinic in Mombasa — 7+ years experience, gentle care, transparent pricing." },
       { name: "twitter:image", content: IMAGES.dentist },
     ],
     links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/why-choose-us" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: FAQS.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://smile-bright-leb.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Why Choose Us", item: "https://smile-bright-leb.lovable.app/why-choose-us" },
+          ],
+        }),
+      },
+    ],
   }),
   component: WhyChooseUsPage,
 });

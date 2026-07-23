@@ -81,8 +81,8 @@ function WhyChooseUsPage() {
               <Link to="/book" className="inline-flex items-center gap-2 bg-gradient-brand text-white px-6 py-3 rounded-full text-sm font-semibold shadow-brand">
                 <Calendar className="w-4 h-4" /> Book An Appointment
               </Link>
-              <a href={`tel:${CLINIC.emergencyPhone}`} className="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-full text-sm font-semibold hover:bg-accent">
-                Emergency: {CLINIC.emergencyPhone}
+              <a href={`tel:${CLINIC.emergency}`} className="inline-flex items-center gap-2 border border-border px-6 py-3 rounded-full text-sm font-semibold hover:bg-accent">
+                Emergency: {CLINIC.emergency}
               </a>
             </div>
           </div>

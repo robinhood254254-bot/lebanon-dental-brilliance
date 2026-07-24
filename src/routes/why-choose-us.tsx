@@ -112,7 +112,7 @@ function WhyChooseUsPage() {
 
       <section className="bg-gradient-brand-soft py-16">
         <div className="container-page grid lg:grid-cols-2 gap-10 items-center">
-          <img src={IMAGES.dentist} alt="Lebanon Dental Care team" className="rounded-3xl shadow-card w-full max-w-md" loading="lazy" />
+          <img src={IMAGES.dentist} alt="Dr. Rajab Chaka, lead dentist at Lebanon Dental Care Clinic in Mombasa, Kenya — trusted family and cosmetic dentist" className="rounded-3xl shadow-card w-full max-w-md" loading="lazy" width="480" height="600" />
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">Our Promise</div>
             <h2 className="mt-2 text-3xl md:text-4xl font-display font-bold">What Every Patient Gets, Every Visit</h2>

@@ -26,12 +26,12 @@ export const Route = createFileRoute("/why-choose-us")({
       { property: "og:type", content: "website" },
       { property: "og:title", content: "Why Choose Lebanon Dental Care Clinic | Trusted Dentist in Mombasa" },
       { property: "og:description", content: "7+ years of trusted, gentle, modern dental care in Mombasa, Kenya — with 24/7 emergency dentistry and transparent pricing." },
-      { property: "og:image", content: IMAGES.dentist },
+      { property: "og:image", content: drRajabChaka },
       { property: "og:url", content: "https://smile-bright-leb.lovable.app/why-choose-us" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Why Choose Lebanon Dental Care Clinic" },
       { name: "twitter:description", content: "The trusted dental clinic in Mombasa — 7+ years experience, gentle care, transparent pricing." },
-      { name: "twitter:image", content: IMAGES.dentist },
+      { name: "twitter:image", content: drRajabChaka },
     ],
     links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/why-choose-us" }],
     scripts: [
@@ -90,7 +90,7 @@ function WhyChooseUsPage() {
         eyebrow="Why Choose Us"
         title="Care You Can Trust, Results You Can See"
         subtitle="Lebanon Dental Care Clinic combines 7+ years of clinical experience with modern equipment and a genuinely warm approach — the reasons over a thousand patients keep coming back."
-        image={IMAGES.clinic}
+        image={clinicInterior}
         imageAlt="Modern dental clinic interior at Lebanon Dental Care in Mombasa, Kenya — the best dental clinic serving Nyali, Bamburi, Shanzu, Mtwapa and Kilifi"
       />
 
@@ -114,7 +114,7 @@ function WhyChooseUsPage() {
 
       <section className="bg-gradient-brand-soft py-16">
         <div className="container-page grid lg:grid-cols-2 gap-10 items-center">
-          <img src={IMAGES.dentist} alt="Dr. Rajab Chaka, lead dentist at Lebanon Dental Care Clinic in Mombasa, Kenya — trusted family and cosmetic dentist" className="rounded-3xl shadow-card w-full max-w-md" loading="lazy" width="480" height="600" />
+          <img src={drRajabChaka} alt="Dr. Rajab Chaka, lead dentist at Lebanon Dental Care Clinic in Mombasa, Kenya — trusted family and cosmetic dentist" className="rounded-3xl shadow-card w-full max-w-md" loading="lazy" width="480" height="600" />
           <div>
             <div className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">Our Promise</div>
             <h2 className="mt-2 text-3xl md:text-4xl font-display font-bold">What Every Patient Gets, Every Visit</h2>

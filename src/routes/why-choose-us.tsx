@@ -89,6 +89,7 @@ function WhyChooseUsPage() {
         title="Care You Can Trust, Results You Can See"
         subtitle="Lebanon Dental Care Clinic combines 7+ years of clinical experience with modern equipment and a genuinely warm approach — the reasons over a thousand patients keep coming back."
         image={IMAGES.clinic}
+        imageAlt="Modern dental clinic interior at Lebanon Dental Care in Mombasa, Kenya — the best dental clinic serving Nyali, Bamburi, Shanzu, Mtwapa and Kilifi"
       />
 
       <section className="container-page py-16">

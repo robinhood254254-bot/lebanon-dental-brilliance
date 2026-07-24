@@ -1,7 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Award, HeartHandshake, ShieldCheck, Sparkles, Stethoscope, Clock, Users, Star, CheckCircle2, Calendar } from "lucide-react";
 import { PageHero, SiteLayout } from "@/components/site/Layout";
-import { CLINIC, IMAGES } from "@/data/clinic";
+import { CLINIC } from "@/data/clinic";
+import clinicInterior from "@/assets/best-dental-clinic-mombasa-interior.jpg";
+import drRajabChaka from "@/assets/dr-rajab-chaka-dentist-mombasa.png";
 
 const FAQS = [
   { q: "What makes Lebanon Dental Care the best dental clinic in Mombasa?", a: "Over 7 years of experience, modern digital equipment, hospital-grade sterilisation, transparent pricing and a genuinely gentle, patient-first approach — trusted by 1,000+ patients across Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi." },

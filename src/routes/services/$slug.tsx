@@ -13,7 +13,8 @@ export const Route = createFileRoute("/services/$slug")({
     const url = `https://smile-bright-leb.lovable.app/services/${params.slug}`;
     if (!loaderData) return { meta: [{ title: "Service not found" }, { name: "robots", content: "noindex" }] };
     const s = loaderData;
-    const title = `${s.name} in Mombasa & Kenya | Lebanon Dental Care`;
+    const fullTitle = `${s.name} in Mombasa | Lebanon Dental Care`;
+    const title = fullTitle.length <= 70 ? fullTitle : `${s.name} | Lebanon Dental Care`;
     const desc = `${s.description} Trusted ${s.name.toLowerCase()} at Lebanon Dental Care Clinic serving Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi.`;
     return {
       meta: [
@@ -120,7 +121,7 @@ function ServiceDetailPage() {
     <SiteLayout>
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-dark text-white">
-        <img src={s.image} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
+        <img src={s.image} alt={`${s.name} treatment at Lebanon Dental Care Clinic in Mombasa, Kenya`} className="absolute inset-0 w-full h-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
         <div className="container-page py-12 md:py-16 relative">
           <Link to="/services" className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm">
@@ -144,7 +145,7 @@ function ServiceDetailPage() {
         <div className="max-w-md mx-auto w-full">
           <img
             src={s.image}
-            alt={s.name}
+            alt={`${s.name} at Lebanon Dental Care Clinic, dentist in Mombasa, Kenya`}
             loading="lazy"
             className="rounded-2xl shadow-card aspect-[4/3] object-cover w-full"
           />

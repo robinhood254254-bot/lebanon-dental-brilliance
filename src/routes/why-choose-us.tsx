@@ -18,7 +18,7 @@ const FAQS = [
 export const Route = createFileRoute("/why-choose-us")({
   head: () => ({
     meta: [
-      { title: "Why Choose Us | Best Dental Clinic in Mombasa, Kenya | Lebanon Dental Care" },
+      { title: "Why Choose Us | Best Dental Clinic in Mombasa | Lebanon Dental" },
       { name: "description", content: "Why 1,000+ patients choose Lebanon Dental Care Clinic in Mombasa: 7+ years experience, modern equipment, gentle care, transparent pricing and 24/7 emergency dentistry across Nyali, Bamburi, Shanzu, Mtwapa and Kilifi." },
       { name: "keywords", content: "why choose Lebanon Dental Care, best dental clinic Mombasa, trusted dentist Kenya, gentle dentist Mombasa, affordable dental care Mombasa, emergency dentist Mombasa, family dentist Kenya, dental clinic Nyali, dental clinic Bamburi" },
       { name: "robots", content: "index, follow" },

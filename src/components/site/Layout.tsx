@@ -23,7 +23,7 @@ export function PageHero({ eyebrow, title, subtitle, image, imageAlt }: { eyebro
     <section className="relative overflow-hidden bg-gradient-brand-soft border-b border-border">
       {image && (
         <div className="absolute inset-0 opacity-20">
-          <img src={image} alt={imageAlt ?? ""} aria-hidden={imageAlt ? undefined : true} className="w-full h-full object-cover" />
+          <img src={image} alt={imageAlt ?? `${title} — Lebanon Dental Care Clinic, Mombasa, Kenya`} aria-hidden={imageAlt ? undefined : true} className="w-full h-full object-cover" />
         </div>
       )}
       <div className="container-page py-16 md:py-24 relative">

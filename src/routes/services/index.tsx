@@ -37,7 +37,7 @@ function ServicesPage() {
               className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-brand hover:-translate-y-1 transition-all"
             >
               <div className="aspect-[4/3] overflow-hidden">
-                <img src={s.image} alt={s.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img src={s.image} alt={`${s.name} at Lebanon Dental Care Clinic in Mombasa, Kenya`} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="p-5">
                 <h3 className="font-display font-bold text-lg">{s.name}</h3>

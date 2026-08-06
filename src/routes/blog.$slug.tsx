@@ -118,7 +118,7 @@ function BlogPostPage() {
           <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {post.read}</span>
         </div>
         <div className="mt-6 rounded-2xl overflow-hidden shadow-card aspect-[16/9] max-h-80">
-          <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
+          <img src={post.image} alt={`${post.title} — Lebanon Dental Care Clinic, Mombasa`} className="w-full h-full object-cover" />
         </div>
         <div className="prose mt-8 max-w-none">
           {post.content.map((p, i) => (

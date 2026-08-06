@@ -145,7 +145,7 @@ function ServiceDetailPage() {
         <div className="max-w-md mx-auto w-full">
           <img
             src={s.image}
-            alt={s.name}
+            alt={`${s.name} at Lebanon Dental Care Clinic, dentist in Mombasa, Kenya`}
             loading="lazy"
             className="rounded-2xl shadow-card aspect-[4/3] object-cover w-full"
           />

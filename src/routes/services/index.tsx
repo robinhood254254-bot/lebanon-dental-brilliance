@@ -12,9 +12,9 @@ export const Route = createFileRoute("/services/")({
       { property: "og:title", content: "Dental Services in Mombasa & Kenya | Lebanon Dental Care" },
       { property: "og:description", content: "Explore our complete range of dental services with modern equipment and a patient-first approach." },
       { property: "og:image", content: SERVICES[0].image },
-      { property: "og:url", content: "https://smile-bright-leb.lovable.app/services" },
+      { property: "og:url", content: "https://www.lebanondentals.com/services" },
     ],
-    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/services" }],
+    links: [{ rel: "canonical", href: "https://www.lebanondentals.com/services" }],
   }),
   component: ServicesPage,
 });

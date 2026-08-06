@@ -12,9 +12,9 @@ export const Route = createFileRoute("/about")({
       { property: "og:title", content: "About Lebanon Dental Care Clinic" },
       { property: "og:description", content: "Our story, mission and team of trusted dental professionals in Mombasa, Kenya." },
       { property: "og:image", content: IMAGES.dentist },
-      { property: "og:url", content: "https://smile-bright-leb.lovable.app/about" },
+      { property: "og:url", content: "https://www.lebanondentals.com/about" },
     ],
-    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://www.lebanondentals.com/about" }],
   }),
   component: AboutPage,
 });

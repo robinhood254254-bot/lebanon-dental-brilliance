@@ -3,7 +3,7 @@ import { ArrowRight, Clock } from "lucide-react";
 import { PageHero, SiteLayout } from "@/components/site/Layout";
 import { BLOG_POSTS } from "@/data/clinic";
 
-const SITE_URL = "https://smile-bright-leb.lovable.app";
+const SITE_URL = "https://www.lebanondentals.com";
 const absoluteImage = (src: string) => (src.startsWith("http") ? src : `${SITE_URL}${src.startsWith("/") ? src : `/${src}`}`);
 
 export const Route = createFileRoute("/blog/")({

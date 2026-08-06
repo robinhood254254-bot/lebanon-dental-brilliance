@@ -13,9 +13,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Lebanon Dental Care Clinic | Best Dentist in Mombasa & Kenya" },
       { property: "og:description", content: "Professional dental care in Mombasa and across Kenya — 7+ years of trusted, patient-first dentistry." },
       { property: "og:image", content: IMAGES.dentist },
-      { property: "og:url", content: "https://smile-bright-leb.lovable.app/" },
+      { property: "og:url", content: "https://www.lebanondentals.com/" },
     ],
-    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://www.lebanondentals.com/" }],
   }),
   component: HomePage,
 });

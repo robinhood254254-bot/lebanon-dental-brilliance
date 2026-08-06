@@ -11,9 +11,9 @@ export const Route = createFileRoute("/contact")({
       { name: "keywords", content: "contact dentist Mombasa, book dental appointment Kenya, emergency dentist Mombasa, Lebanon Dental Care contact" },
       { property: "og:title", content: "Contact Lebanon Dental Care Clinic" },
       { property: "og:description", content: "Get in touch with our dental team in Mombasa, Kenya." },
-      { property: "og:url", content: "https://smile-bright-leb.lovable.app/contact" },
+      { property: "og:url", content: "https://www.lebanondentals.com/contact" },
     ],
-    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/contact" }],
+    links: [{ rel: "canonical", href: "https://www.lebanondentals.com/contact" }],
   }),
   component: ContactPage,
 });

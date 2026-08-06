@@ -34,7 +34,7 @@ function Slider() {
         <img
           key={s}
           src={s}
-          alt="Clinic"
+          alt={SLIDE_ALTS[idx] ?? "Lebanon Dental Care Clinic team treating patients in Mombasa, Kenya"}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${idx === i ? "opacity-100" : "opacity-0"}`}
         />
       ))}
@@ -164,7 +164,7 @@ function HomePage() {
               className="group bg-card rounded-2xl overflow-hidden border border-border hover:shadow-brand hover:-translate-y-1 transition-all"
             >
               <div className="aspect-[4/3] overflow-hidden">
-                <img src={s.image} alt={s.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img src={s.image} alt={`${s.name} at Lebanon Dental Care Clinic in Mombasa, Kenya`} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
               </div>
               <div className="p-5">
                 <h3 className="font-display font-bold text-lg">{s.name}</h3>
@@ -232,7 +232,7 @@ function HomePage() {
             { img: IMAGES.cavities, label: "Cavity Restoration" },
           ].map((b) => (
             <div key={b.label} className="group relative rounded-2xl overflow-hidden shadow-card">
-              <img src={b.img} alt={b.label} loading="lazy" className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" />
+              <img src={b.img} alt={`${b.label} before and after results at Lebanon Dental Care Clinic, Mombasa`} loading="lazy" className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-transform duration-700" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
                 <div className="text-xs uppercase tracking-wider text-white/70">Before & After</div>
@@ -258,7 +258,7 @@ function HomePage() {
                 </div>
                 <p className="text-foreground/80 italic">"{t.text}"</p>
                 <div className="mt-5 flex items-center gap-3">
-                  <img src={t.image} alt={t.name} className="w-11 h-11 rounded-full object-cover" />
+                  <img src={t.image} alt={`${t.name}, verified patient of Lebanon Dental Care Clinic Mombasa`} className="w-11 h-11 rounded-full object-cover" />
                   <div>
                     <div className="font-bold text-foreground text-sm">{t.name}</div>
                     <div className="text-xs text-muted-foreground">{t.treatment}</div>

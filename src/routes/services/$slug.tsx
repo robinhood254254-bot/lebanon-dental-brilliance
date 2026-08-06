@@ -121,7 +121,7 @@ function ServiceDetailPage() {
     <SiteLayout>
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-dark text-white">
-        <img src={s.image} alt="" className="absolute inset-0 w-full h-full object-cover opacity-25" />
+        <img src={s.image} alt={`${s.name} treatment at Lebanon Dental Care Clinic in Mombasa, Kenya`} className="absolute inset-0 w-full h-full object-cover opacity-25" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
         <div className="container-page py-12 md:py-16 relative">
           <Link to="/services" className="inline-flex items-center gap-2 text-white/80 hover:text-white text-sm">

@@ -33,7 +33,7 @@ function TestimonialsPage() {
               </div>
               <p className="text-foreground/85 italic">"{t.text}"</p>
               <div className="mt-5 flex items-center gap-3">
-                <img src={t.image} alt={t.name} className="w-12 h-12 rounded-full object-cover" />
+                <img src={t.image} alt={`${t.name}, patient of Lebanon Dental Care Clinic in Mombasa`} className="w-12 h-12 rounded-full object-cover" />
                 <div>
                   <div className="font-bold text-foreground text-sm">{t.name}</div>
                   <div className="text-xs text-muted-foreground">{t.treatment}</div>
@@ -50,7 +50,7 @@ function TestimonialsPage() {
         </div>
         <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-4">
           {[IMAGES.whiteningBA, IMAGES.veneersBA, IMAGES.cavities, IMAGES.whiteningProcess, IMAGES.dentures, IMAGES.smile1].map((img, i) => (
-            <img key={i} src={img} alt="Before and after" loading="lazy" className="w-full aspect-[4/5] object-cover rounded-2xl shadow-card" />
+            <img key={i} src={img} alt="Before and after dental treatment result at Lebanon Dental Care Clinic, Mombasa" loading="lazy" className="w-full aspect-[4/5] object-cover rounded-2xl shadow-card" />
           ))}
         </div>
       </section>

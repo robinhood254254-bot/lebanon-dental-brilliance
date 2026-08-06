@@ -51,9 +51,9 @@ function Slider() {
       <div className="absolute bottom-16 right-4 bg-white/95 backdrop-blur rounded-2xl px-4 py-3 shadow-card">
         <div className="flex items-center gap-2">
           <div className="flex -space-x-2">
-            <img src={IMAGES.smile1} className="w-7 h-7 rounded-full border-2 border-white object-cover" alt="" />
-            <img src={IMAGES.smile2} className="w-7 h-7 rounded-full border-2 border-white object-cover" alt="" />
-            <img src={IMAGES.childSmile} className="w-7 h-7 rounded-full border-2 border-white object-cover" alt="" />
+            <img src={IMAGES.smile1} className="w-7 h-7 rounded-full border-2 border-white object-cover" alt="Happy Lebanon Dental Care patient smiling" />
+            <img src={IMAGES.smile2} className="w-7 h-7 rounded-full border-2 border-white object-cover" alt="Patient with a bright smile after dental treatment in Mombasa" />
+            <img src={IMAGES.childSmile} className="w-7 h-7 rounded-full border-2 border-white object-cover" alt="Child smiling after a dental check-up in Mombasa" />
           </div>
           <div>
             <div className="text-xs font-bold text-foreground">1,000+ Happy Patients</div>

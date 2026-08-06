@@ -30,7 +30,7 @@ function AboutPage() {
 
       {/* Story */}
       <section className="container-page py-16 grid lg:grid-cols-2 gap-12 items-center">
-        <img src={IMAGES.clinic} alt="Lebanon Dental Care clinic" className="rounded-3xl shadow-card" loading="lazy" />
+        <img src={IMAGES.clinic} alt="Lebanon Dental Care Clinic interior in Mombasa, Kenya" className="rounded-3xl shadow-card" loading="lazy" />
         <div>
           <div className="text-xs font-bold uppercase tracking-[0.2em] text-secondary">Our Story</div>
           <h2 className="mt-2 text-3xl md:text-4xl font-display font-bold">A Decade Of Bright Smiles</h2>
@@ -71,7 +71,7 @@ function AboutPage() {
           ].map((m) => (
             <div key={m.name} className="bg-card rounded-2xl overflow-hidden border border-border shadow-card group">
               <div className="aspect-[4/5] overflow-hidden">
-                <img src={m.image} alt={m.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src={m.image} alt={`${m.name} — ${m.role} at Lebanon Dental Care Clinic, Mombasa`} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="p-5 text-center">
                 <h3 className="font-display font-bold text-lg">{m.name}</h3>
@@ -107,8 +107,17 @@ function AboutPage() {
           <h2 className="mt-2 text-3xl md:text-4xl font-display font-bold">Modern Facilities & Equipment</h2>
         </div>
         <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3">
-          {[IMAGES.clinic, IMAGES.treatingPatient1, IMAGES.childCheckup, IMAGES.drRajab, IMAGES.treatingPatient2, IMAGES.drAlone, IMAGES.teamGroup, IMAGES.drRajab2].map((img, i) => (
-            <img key={i} src={img} alt="" loading="lazy" className="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform duration-500" />
+          {[
+            { src: IMAGES.clinic, alt: "Reception and waiting area at Lebanon Dental Care Clinic in Mombasa, Kenya" },
+            { src: IMAGES.treatingPatient1, alt: "Dentist and assistant treating a patient at Lebanon Dental Care Clinic, Mombasa" },
+            { src: IMAGES.childCheckup, alt: "Child dental check-up at Lebanon Dental Care Clinic in Mombasa, Kenya" },
+            { src: IMAGES.drRajab, alt: "Dr. Rajab Chaka, lead dentist at Lebanon Dental Care Clinic Mombasa" },
+            { src: IMAGES.treatingPatient2, alt: "Dental treatment in progress using modern equipment at Lebanon Dental Care, Mombasa" },
+            { src: IMAGES.drAlone, alt: "Dr. Rajab Chaka in the treatment room at Lebanon Dental Care Clinic, Mombasa" },
+            { src: IMAGES.teamGroup, alt: "Lebanon Dental Care clinical team in Mombasa, Kenya" },
+            { src: IMAGES.drRajab2, alt: "Dr. Rajab Chaka with a patient at Lebanon Dental Care Clinic, Mombasa" },
+          ].map((img, i) => (
+            <img key={i} src={img.src} alt={img.alt} loading="lazy" className="w-full aspect-square object-cover rounded-2xl hover:scale-105 transition-transform duration-500" />
           ))}
         </div>
       </section>

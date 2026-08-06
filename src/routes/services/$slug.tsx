@@ -13,7 +13,8 @@ export const Route = createFileRoute("/services/$slug")({
     const url = `https://smile-bright-leb.lovable.app/services/${params.slug}`;
     if (!loaderData) return { meta: [{ title: "Service not found" }, { name: "robots", content: "noindex" }] };
     const s = loaderData;
-    const title = `${s.name} in Mombasa & Kenya | Lebanon Dental Care`;
+    const fullTitle = `${s.name} in Mombasa | Lebanon Dental Care`;
+    const title = fullTitle.length <= 70 ? fullTitle : `${s.name} | Lebanon Dental Care`;
     const desc = `${s.description} Trusted ${s.name.toLowerCase()} at Lebanon Dental Care Clinic serving Mombasa, Nyali, Bamburi, Shanzu, Mtwapa and Kilifi.`;
     return {
       meta: [

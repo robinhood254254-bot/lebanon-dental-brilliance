@@ -4,7 +4,7 @@ import { SERVICES, BLOG_POSTS, IMAGES } from "@/data/clinic";
 import clinicInterior from "@/assets/best-dental-clinic-mombasa-interior.jpg";
 import drRajabChaka from "@/assets/dr-rajab-chaka-dentist-mombasa.png";
 
-const BASE_URL = "https://smile-bright-leb.lovable.app";
+const BASE_URL = "https://www.lebanondentals.com";
 
 const abs = (src: string) => (src.startsWith("http") ? src : `${BASE_URL}${src}`);
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

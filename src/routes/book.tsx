@@ -12,9 +12,9 @@ export const Route = createFileRoute("/book")({
       { name: "keywords", content: "book dentist Mombasa, dental appointment Kenya, schedule dentist Nyali, WhatsApp dental booking" },
       { property: "og:title", content: "Book Appointment | Lebanon Dental Care" },
       { property: "og:description", content: "Easy online dental booking with instant WhatsApp confirmation." },
-      { property: "og:url", content: "https://smile-bright-leb.lovable.app/book" },
+      { property: "og:url", content: "https://www.lebanondentals.com/book" },
     ],
-    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/book" }],
+    links: [{ rel: "canonical", href: "https://www.lebanondentals.com/book" }],
   }),
   component: BookPage,
 });

@@ -3,7 +3,7 @@ import { ArrowLeft, ArrowRight, Calendar, Clock, MessageCircle } from "lucide-re
 import { SiteLayout } from "@/components/site/Layout";
 import { BLOG_POSTS, buildWhatsAppUrl } from "@/data/clinic";
 
-const SITE_URL = "https://smile-bright-leb.lovable.app";
+const SITE_URL = "https://www.lebanondentals.com";
 const absoluteImage = (src: string) => (src.startsWith("http") ? src : `${SITE_URL}${src.startsWith("/") ? src : `/${src}`}`);
 
 export const Route = createFileRoute("/blog/$slug")({
@@ -47,7 +47,7 @@ export const Route = createFileRoute("/blog/$slug")({
             publisher: {
               "@type": "Organization",
               name: "Lebanon Dental Care",
-              logo: { "@type": "ImageObject", url: "https://smile-bright-leb.lovable.app/logo.png" },
+              logo: { "@type": "ImageObject", url: "https://www.lebanondentals.com/logo.png" },
             },
             mainEntityOfPage: url,
           }),
@@ -74,8 +74,8 @@ export const Route = createFileRoute("/blog/$slug")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://smile-bright-leb.lovable.app/" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://smile-bright-leb.lovable.app/blog" },
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.lebanondentals.com/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://www.lebanondentals.com/blog" },
               { "@type": "ListItem", position: 3, name: p.title, item: url },
             ],
           }),

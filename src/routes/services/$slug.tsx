@@ -10,7 +10,7 @@ export const Route = createFileRoute("/services/$slug")({
     return service;
   },
   head: ({ loaderData, params }) => {
-    const url = `https://smile-bright-leb.lovable.app/services/${params.slug}`;
+    const url = `https://www.lebanondentals.com/services/${params.slug}`;
     if (!loaderData) return { meta: [{ title: "Service not found" }, { name: "robots", content: "noindex" }] };
     const s = loaderData;
     const fullTitle = `${s.name} in Mombasa | Lebanon Dental Care`;
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/services/$slug")({
             url,
             howPerformed: s.process.map((p) => `${p.step}: ${p.detail}`).join(" | "),
             benefits: s.benefits.join(", "),
-            provider: { "@id": "https://smile-bright-leb.lovable.app/#clinic" },
+            provider: { "@id": "https://www.lebanondentals.com/#clinic" },
           }),
         },
         {
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/services/$slug")({
               { "@type": "City", name: "Kilifi" },
               { "@type": "Country", name: "Kenya" },
             ],
-            provider: { "@id": "https://smile-bright-leb.lovable.app/#clinic" },
+            provider: { "@id": "https://www.lebanondentals.com/#clinic" },
             url,
           }),
         },
@@ -86,8 +86,8 @@ export const Route = createFileRoute("/services/$slug")({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://smile-bright-leb.lovable.app/" },
-              { "@type": "ListItem", position: 2, name: "Services", item: "https://smile-bright-leb.lovable.app/services" },
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://www.lebanondentals.com/" },
+              { "@type": "ListItem", position: 2, name: "Services", item: "https://www.lebanondentals.com/services" },
               { "@type": "ListItem", position: 3, name: s.name, item: url },
             ],
           }),

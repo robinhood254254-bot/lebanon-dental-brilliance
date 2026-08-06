@@ -12,9 +12,9 @@ export const Route = createFileRoute("/testimonials")({
       { property: "og:title", content: "Patient Testimonials | Lebanon Dental Care" },
       { property: "og:description", content: "Real stories from real dental patients in Mombasa, Kenya." },
       { property: "og:image", content: IMAGES.smile1 },
-      { property: "og:url", content: "https://smile-bright-leb.lovable.app/testimonials" },
+      { property: "og:url", content: "https://www.lebanondentals.com/testimonials" },
     ],
-    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/testimonials" }],
+    links: [{ rel: "canonical", href: "https://www.lebanondentals.com/testimonials" }],
   }),
   component: TestimonialsPage,
 });

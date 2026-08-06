@@ -27,13 +27,13 @@ export const Route = createFileRoute("/why-choose-us")({
       { property: "og:title", content: "Why Choose Lebanon Dental Care Clinic | Trusted Dentist in Mombasa" },
       { property: "og:description", content: "7+ years of trusted, gentle, modern dental care in Mombasa, Kenya — with 24/7 emergency dentistry and transparent pricing." },
       { property: "og:image", content: drRajabChaka },
-      { property: "og:url", content: "https://smile-bright-leb.lovable.app/why-choose-us" },
+      { property: "og:url", content: "https://www.lebanondentals.com/why-choose-us" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Why Choose Lebanon Dental Care Clinic" },
       { name: "twitter:description", content: "The trusted dental clinic in Mombasa — 7+ years experience, gentle care, transparent pricing." },
       { name: "twitter:image", content: drRajabChaka },
     ],
-    links: [{ rel: "canonical", href: "https://smile-bright-leb.lovable.app/why-choose-us" }],
+    links: [{ rel: "canonical", href: "https://www.lebanondentals.com/why-choose-us" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -53,8 +53,8 @@ export const Route = createFileRoute("/why-choose-us")({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://smile-bright-leb.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Why Choose Us", item: "https://smile-bright-leb.lovable.app/why-choose-us" },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.lebanondentals.com/" },
+            { "@type": "ListItem", position: 2, name: "Why Choose Us", item: "https://www.lebanondentals.com/why-choose-us" },
           ],
         }),
       },

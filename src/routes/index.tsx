@@ -21,6 +21,13 @@ export const Route = createFileRoute("/")({
 });
 
 const slides = [IMAGES.teamGroup, IMAGES.childCheckup, IMAGES.drAlone, IMAGES.treatingPatient1, IMAGES.treatingPatient2];
+const SLIDE_ALTS = [
+  "Lebanon Dental Care Clinic dental team in Mombasa, Kenya",
+  "Child having a dental check-up at Lebanon Dental Care Clinic, Mombasa",
+  "Dr. Rajab Chaka, lead dentist at Lebanon Dental Care Clinic in Mombasa",
+  "Dentist and assistant treating a patient at Lebanon Dental Care, Mombasa",
+  "Modern dental treatment in progress at Lebanon Dental Care Clinic, Mombasa",
+];
 
 function Slider() {
   const [i, setI] = useState(0);
